@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="57885462-16aa-4788-8320-dfb1a3dd0b79" manual="true">
+    <element uuid="9232973e-5ffb-4402-9cca-8d3949912e6e" manual="true">
+      <element uuid="7507d977-f58c-431b-9da9-f607da2d155a" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>inside_system_type_inside_impl_new_connection</seg>
+      </bo>
+    </element>
+    <element uuid="0401a23a-ec3a-4f05-823f-0bf4b0b4e8a7" manual="true">
+      <element uuid="8df661b1-0130-48c7-8e57-25cbfaeec6d5" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>inside_system_type_inside_impl_new_connection2</seg>
+      </bo>
+    </element>
+    <element uuid="9b09f117-b08e-4400-9373-a5c6248e9e7c" manual="true">
+      <element uuid="8b9c1e66-f75a-4c68-8e6f-e8db6a17e75c" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>inside_system_type_inside_impl_new_connection3</seg>
+      </bo>
+    </element>
+    <element uuid="da839fa6-1085-41ca-ae26-b3127b347345" manual="true">
+      <element uuid="f56dd16e-738a-4b15-8b2d-d88854d4a15c" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>inside_system_type_inside_impl_new_connection4</seg>
+      </bo>
+    </element>
+    <element uuid="44ffee45-fe47-42b7-888d-4799ff5b8295" manual="true">
+      <element uuid="c990e30c-423d-45a3-8497-6320f0a99bf1" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>inside_system_type_inside_impl_new_connection5</seg>
+      </bo>
+    </element>
+    <element uuid="da2ea286-af1c-416d-b9fe-aabc8be0a28e" manual="true">
+      <bo>
+        <seg>realization</seg>
+      </bo>
+    </element>
+    <element uuid="4c460cc7-c6bd-44d0-8d59-7ba9d556dbec" manual="true">
+      <element uuid="5d269f55-b147-4908-999b-d38f180d30ee" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>coffee_bean_container</seg>
+        </bo>
+        <position y="250.0"/>
+      </element>
+      <element uuid="c263b45c-5b2a-4f12-8165-f4abacd4b93e" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>drink_selection</seg>
+        </bo>
+        <position y="70.0"/>
+      </element>
+      <element uuid="c994eea9-698d-4429-9f88-c70cd040b4bb" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>milk_container</seg>
+        </bo>
+        <position y="190.0"/>
+      </element>
+      <element uuid="fc1adb69-5687-4e50-afb1-82bfa8336fbd" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>signalizer</seg>
+        </bo>
+        <position y="130.0"/>
+      </element>
+      <element uuid="ba627cc9-0eb4-4094-bba6-bff819506a8c" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>water_container</seg>
+        </bo>
+        <position y="295.0"/>
+      </element>
+      <element uuid="0077d3c1-8db2-4393-a73c-0a36277b6bf3" manual="true">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>coffee_machine_new_flow_spec</seg>
+        </bo>
+        <position x="68.0" y="223.0"/>
+      </element>
+      <element uuid="8e33fb6b-2d68-4e80-85fe-a8fecfb832f0" manual="true">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>coffee_machine_new_flow_spec2</seg>
+        </bo>
+        <position x="69.0" y="103.0"/>
+      </element>
+      <element uuid="7c21efa4-9758-4475-9bda-796348b90bbe" manual="true">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>coffee_machine_new_flow_spec3</seg>
+        </bo>
+        <position x="64.08837890625" y="158.47680473327637"/>
+      </element>
+      <element uuid="3d4b3029-3d70-4784-a294-9d9f40df9687" manual="true">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>coffee_machine_new_flow_spec4</seg>
+        </bo>
+        <position x="54.0" y="329.0"/>
+      </element>
+      <element uuid="e210e2dc-c809-4168-bc58-a8f84d63dc51" manual="true">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>coffee_machine_new_flow_spec5</seg>
+        </bo>
+        <position x="53.0" y="282.0"/>
+      </element>
+      <element uuid="257d01c4-9566-41e2-ba26-33ee0a47ef7c" manual="true">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>Analyzer</seg>
+        </bo>
+        <position x="280.0" y="280.0"/>
+        <size width="398.7265625" height="190.0"/>
+      </element>
+      <element uuid="d310f306-3a47-4edd-b797-bd399959b128" manual="true">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>Brewer</seg>
+        </bo>
+        <position x="580.0" y="100.0"/>
+        <size width="90.0" height="36.0"/>
+      </element>
+      <element uuid="661b93f5-815a-40e2-b59d-70bd406d3b66" manual="true">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>Display</seg>
+        </bo>
+        <position x="110.0" y="140.0"/>
+        <size width="170.0" height="36.0"/>
+      </element>
+      <element uuid="55996b87-08eb-46c1-8a01-704b9ef9753f" manual="true">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>Grinder</seg>
+        </bo>
+        <position x="580.0" y="200.0"/>
+        <size width="90.0" height="36.0"/>
+      </element>
+      <element uuid="93382025-d2fc-4a41-97aa-6a545a8f84c9" manual="true">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>Heater</seg>
+        </bo>
+        <position x="480.0" y="100.0"/>
+        <size width="90.0" height="36.0"/>
+      </element>
+      <element uuid="e1bf6909-2dd1-4ff8-8437-bf155e17c61e" manual="true">
+        <element uuid="2ab8dc45-e0c6-47e9-8f46-387040b11dfe" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>beverage_choice</seg>
+          </bo>
+          <position y="10.0"/>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>Input</seg>
+        </bo>
+        <position x="40.0" y="490.0"/>
+        <size width="450.0" height="80.0"/>
+      </element>
+      <element uuid="1e605a65-010a-40f7-a3ab-29425cece551" manual="true">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>MilkFoamer</seg>
+        </bo>
+        <position x="480.0" y="200.0"/>
+        <size width="90.0" height="36.0"/>
+      </element>
+      <element uuid="5ace6ac3-a5dd-440e-8bcd-4714627dac09" manual="true">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>MilkHeater</seg>
+        </bo>
+        <position x="480.0" y="150.0"/>
+        <size width="90.0" height="36.0"/>
+      </element>
+      <element uuid="79faea15-a5da-4836-ba79-a89a2bb610b4" manual="true">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>Pourer</seg>
+        </bo>
+        <position x="580.0" y="150.0"/>
+        <size width="90.0" height="36.0"/>
+      </element>
+      <element uuid="6345aef4-64a2-442d-9720-5f79ae1129ae" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>sc_type</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>coffee_machine</seg>
+      </bo>
+      <position x="430.0" y="40.0"/>
+      <size width="748.7265625" height="600.0"/>
+    </element>
+    <element uuid="4c16b8ce-5dcb-4666-a83f-cee411bbd517" manual="true">
+      <element uuid="062c9c09-4ea1-433f-b626-2b9d63e1b757" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>coffee_beans_supply</seg>
+        </bo>
+        <position x="149.23046875" y="230.0"/>
+      </element>
+      <element uuid="a4ab3586-4db0-4b09-80b6-c0e5f9e47b14" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>eyes</seg>
+        </bo>
+        <position x="256.7565116882324" y="100.0"/>
+      </element>
+      <element uuid="58f97bf5-3483-4225-a615-49c72034a67b" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>finger</seg>
+        </bo>
+        <position x="249.00260543823242" y="45.0"/>
+      </element>
+      <element uuid="b4683160-2ef3-4a14-a4d7-f87752f6febb" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>milk_supply</seg>
+        </bo>
+        <position x="209.2955780029297" y="180.0"/>
+      </element>
+      <element uuid="a7b4c55c-f29c-4318-adfc-9ec3eb8e459f" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>water_supply</seg>
+        </bo>
+        <position x="199.42578887939453" y="280.0"/>
+      </element>
+      <element uuid="8da284d3-ba90-4f4f-a7ff-031104f50553" manual="true">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>operator_new_flow_spec</seg>
+        </bo>
+        <position x="233.58756041526794" y="128.05954933166504"/>
+      </element>
+      <element uuid="3aa63842-9ef7-4733-bb80-f939bea24fb2" manual="true">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>operator_new_flow_spec2</seg>
+        </bo>
+        <position x="242.0" y="210.0"/>
+      </element>
+      <element uuid="79c40df1-0694-448b-839e-a54c8163eeb8" manual="true">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>operator_new_flow_spec3</seg>
+        </bo>
+        <position x="223.0442373752594" y="78.48979759216309"/>
+      </element>
+      <element uuid="0d80d943-2e01-4875-b315-c86a301d1264" manual="true">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>operator_new_flow_spec4</seg>
+        </bo>
+        <position x="249.76953125" y="262.0"/>
+      </element>
+      <element uuid="89f54eaa-81a9-45ce-aafc-69bf6ba4d0f4" manual="true">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>operator_new_flow_spec5</seg>
+        </bo>
+        <position x="249.0" y="312.0"/>
+      </element>
+      <element uuid="24a4956e-131d-4a29-8e87-574258ca12f8" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>sc_type</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>ehevi</seg>
+      </bo>
+      <position x="90.0" y="70.0"/>
+      <size width="300.0" height="365.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>inside_system_type.inside_impl</seg>
+    </bo>
+    <position x="80.0" y="50.0"/>
+    <size width="1220.0" height="670.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>inside::inside_system_type.inside_impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>

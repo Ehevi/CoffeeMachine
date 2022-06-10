@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="002d148a-4b02-4406-9ed0-d71fc61abed8" manual="true">
+    <element uuid="fc6a69fa-9535-4f63-ab6c-ddccdbf38c74" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>inside_system_type</seg>
+      </bo>
+      <position x="70.0" y="40.0"/>
+      <size width="229.0" height="58.0"/>
+    </element>
+    <element uuid="4a3933c1-f86a-4a5b-8ba0-994f36d4cdca" manual="true">
+      <element uuid="35d6ddc3-060b-4645-86c5-7689d7ef949f" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>inside_system_type.inside_impl</seg>
+      </bo>
+      <position x="80.0" y="150.0"/>
+      <size width="520.0" height="60.0"/>
+    </element>
+    <bo>
+      <seg>package</seg>
+      <seg>inside</seg>
+    </bo>
+    <position y="60.0"/>
+    <size width="730.0" height="610.0"/>
+  </element>
+  <config type="package" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>package</seg>
+      <seg>inside</seg>
+    </context>
+  </config>
+</diagram:Diagram>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="602189cd-60ce-407e-bab2-0c813a6f64d8" manual="true">
+    <element uuid="d01aa1b5-a447-42a5-b80a-3c95743e44e6" manual="true">
+      <element uuid="92ee7879-7bf9-488e-a366-df68aab9bdab" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>eyes</seg>
+        </bo>
+        <position x="87.16145706176758" y="95.0"/>
+      </element>
+      <element uuid="88fa3bf6-8cb9-4cb4-8726-fe387b9105c7" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>finger</seg>
+        </bo>
+        <position x="79.40755081176758" y="32.0"/>
+      </element>
+      <element uuid="ab3bffa0-7c61-49bd-b768-7361c1fe23c1" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>milk_supply</seg>
+        </bo>
+        <position x="39.700523376464844" y="155.0"/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>user</seg>
+      </bo>
+      <position x="81.0" y="75.0"/>
+      <size width="130.40494537353516" height="235.0"/>
+    </element>
+    <element uuid="58760c49-c512-4b8d-92b1-843d580215da" manual="true">
+      <element uuid="fe989b21-fb79-4741-9463-9989bca122fd" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>user.user_impl</seg>
+      </bo>
+      <position x="80.0" y="360.0"/>
+      <size width="130.0" height="36.0"/>
+    </element>
+    <bo>
+      <seg>package</seg>
+      <seg>environment</seg>
+    </bo>
+    <position x="20.0" y="20.0"/>
+    <size width="1260.0" height="640.0"/>
+  </element>
+  <config type="package" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>package</seg>
+      <seg>environment</seg>
+    </context>
+  </config>
+</diagram:Diagram>

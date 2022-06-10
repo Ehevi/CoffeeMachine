@@ -1,0 +1,27 @@
+package inside
+public
+	with environ;
+
+	system inside_system_type
+	end inside_system_type;
+
+	system implementation inside_system_type.inside_impl
+	subcomponents
+		ehevi: abstract environ::operator.ehevi;
+		coffee_machine: system environ::coffee_machine.cm_implementation;
+	connections
+		inside_system_type_inside_impl_new_connection: feature ehevi.finger -> coffee_machine.drink_selection;
+		inside_system_type_inside_impl_new_connection2: feature coffee_machine.signalizer -> ehevi.eyes;
+
+		inside_system_type_inside_impl_new_connection3: feature ehevi.milk_supply -> coffee_machine.milk_container;
+
+		inside_system_type_inside_impl_new_connection4: feature ehevi.coffee_beans_supply -> coffee_machine.coffee_bean_container;
+		inside_system_type_inside_impl_new_connection5: feature ehevi.water_supply -> coffee_machine.water_container;
+	flows
+		drink_selection_process: end to end flow ehevi.operator_new_flow_spec3 -> inside_system_type_inside_impl_new_connection -> coffee_machine.coffee_machine_new_flow_spec2;
+		signalization_flow: end to end flow coffee_machine.coffee_machine_new_flow_spec3 -> inside_system_type_inside_impl_new_connection2 -> ehevi.operator_new_flow_spec;
+		milk_refillment: end to end flow ehevi.operator_new_flow_spec2 -> inside_system_type_inside_impl_new_connection3 -> coffee_machine.coffee_machine_new_flow_spec;
+		coffee_beans_refillment: end to end flow ehevi.operator_new_flow_spec4 -> inside_system_type_inside_impl_new_connection4 -> coffee_machine.coffee_machine_new_flow_spec5;
+		water_refillment: end to end flow ehevi.operator_new_flow_spec5 -> inside_system_type_inside_impl_new_connection5 -> coffee_machine.coffee_machine_new_flow_spec4;
+end inside_system_type.inside_impl;
+end inside;

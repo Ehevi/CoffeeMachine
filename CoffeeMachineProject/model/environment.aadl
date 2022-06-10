@@ -1,0 +1,13 @@
+package environment
+public
+
+	abstract user
+	features
+		finger: out feature;
+		eyes: in feature;
+		milk_supply: out event port;
+end user;
+
+	abstract implementation user.user_impl
+	end user.user_impl;
+end environment;
