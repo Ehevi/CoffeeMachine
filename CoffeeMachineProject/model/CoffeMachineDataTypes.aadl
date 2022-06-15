@@ -1,0 +1,60 @@
+package CoffeMachineDataTypes
+public
+	with Data_Model;
+	
+	-- Data types definitions
+	
+	
+	-- User input data
+	
+	data MilkFoamData
+		properties
+			Data_Model::Data_Representation => Integer;
+	end MilkFoamData;
+	
+	data WaterData
+		properties
+			Data_Model::Data_Representation => Integer;
+	end WaterData;
+	
+	data MilkData
+		properties
+			Data_Model::Data_Representation => Integer;
+	end MilkData;
+	
+	data CoffeeData
+		properties
+			Data_Model::Data_Representation => Integer;
+	end CoffeeData;
+	
+	
+	-- Sensor data
+		
+	data TemperatureData
+		properties
+			Data_Model::Data_Representation => Integer;
+	end TemperatureData;
+	
+	data WaterMeasureData
+		properties
+			Data_Model::Data_Representation => Integer;
+	end WaterMeasureData;
+	
+	data MilkMeasureData
+		properties
+			Data_Model::Data_Representation => Integer;
+	end MilkMeasureData;
+	
+	data CoffeeMeasureData
+		properties
+			Data_Model::Data_Representation => Integer;
+	end CoffeeMeasureData;
+	
+	
+	-- Frame
+		
+	data BusFrame
+		properties
+			Data_Model::Data_Representation => String;
+	end BusFrame;
+end CoffeMachineDataTypes;
