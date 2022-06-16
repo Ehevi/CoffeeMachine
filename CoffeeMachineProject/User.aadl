@@ -7,7 +7,7 @@ public
 			finger: out feature;
 			milk_supply: out feature;
 			water_supply: out feature;
-			coffee_beans_supply: out feature;
+			coffee_bean_supply: out feature;
 	end User;
 	
 	abstract implementation User.user

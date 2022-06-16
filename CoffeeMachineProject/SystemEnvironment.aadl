@@ -17,7 +17,7 @@ public
 			ready: feature coffeeMachine.display -> user.eyes;
 			milk_refillment: feature user.milk_supply -> coffeeMachine.milk_container;
 			water_refillment: feature user.water_supply -> coffeeMachine.water_container;
-			coffee_refillment: feature user.coffee_beans_supply -> coffeeMachine.coffee_bean_container;
+			coffee_refillment: feature user.coffee_bean_supply -> coffeeMachine.coffee_bean_container;
 	
 	end SystemEnvironment.impl;
 
