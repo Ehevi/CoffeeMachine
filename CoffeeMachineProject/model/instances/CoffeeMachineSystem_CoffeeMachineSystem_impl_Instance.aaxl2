@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="ASCII"?>
 <instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="CoffeeMachineSystem_impl_Instance" category="system">
+  <featureInstance name="display" category="abstractFeature" direction="out">
+    <feature xsi:type="aadl2:AbstractFeature" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedAbstractFeature.0"/>
+  </featureInstance>
+  <featureInstance name="drink_selection" category="eventDataPort">
+    <feature xsi:type="aadl2:EventDataPort" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
+  </featureInstance>
+  <featureInstance name="milk_container" category="eventDataPort">
+    <feature xsi:type="aadl2:EventDataPort" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.1"/>
+  </featureInstance>
+  <featureInstance name="water_container" category="eventDataPort">
+    <feature xsi:type="aadl2:EventDataPort" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.2"/>
+  </featureInstance>
+  <featureInstance name="coffee_bean_container" category="eventDataPort">
+    <feature xsi:type="aadl2:EventDataPort" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.3"/>
+  </featureInstance>
   <componentInstance name="gpio_bus" category="bus">
     <subcomponent xsi:type="aadl2:BusSubcomponent" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
     <index>0</index>
@@ -100,9 +115,39 @@
     <index>0</index>
     <classifier xsi:type="aadl2:SystemType" href="../coffeeMaker/CoffeeMakerSubsystem.aadl#CoffeeMakerSubsystem.CoffeeMakerSystem"/>
   </componentInstance>
+  <connectionInstance name="drink_selection -> buttons.Water" kind="portConnection" destination="//@componentInstance.2/@featureInstance.0" source="//@featureInstance.1">
+    <connectionReference context="/" source="//@featureInstance.1" destination="//@componentInstance.2/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="drink_selection -> buttons.Milk" kind="portConnection" destination="//@componentInstance.2/@featureInstance.1" source="//@featureInstance.1">
+    <connectionReference context="/" source="//@featureInstance.1" destination="//@componentInstance.2/@featureInstance.1">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="drink_selection -> buttons.MilkFoam" kind="portConnection" destination="//@componentInstance.2/@featureInstance.2" source="//@featureInstance.1">
+    <connectionReference context="/" source="//@featureInstance.1" destination="//@componentInstance.2/@featureInstance.2">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="drink_selection -> buttons.Coffee" kind="portConnection" destination="//@componentInstance.2/@featureInstance.3" source="//@featureInstance.1">
+    <connectionReference context="/" source="//@featureInstance.1" destination="//@componentInstance.2/@featureInstance.3">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
   <connectionInstance name="gpio_bus -> main_controller.GpioBusData" complete="true" kind="accessConnection" destination="//@componentInstance.3/@featureInstance.0" source="//@componentInstance.0">
     <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.3/@featureInstance.0">
       <connection xsi:type="aadl2:AccessConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="signalizer.Finished -> display" destination="//@featureInstance.0" source="//@componentInstance.1/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.1/@featureInstance.0" destination="//@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="signalizer.RefillmentNeeded -> display" destination="//@featureInstance.0" source="//@componentInstance.1/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.1/@featureInstance.1" destination="//@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.5"/>
     </connectionReference>
   </connectionInstance>
   <systemOperationMode name="No Modes"/>

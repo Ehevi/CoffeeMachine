@@ -32,7 +32,18 @@ public
   		
 		connections
 			bus_conn: bus access gpio_bus -> main_controller.GpioBusData;
+			
+			-- drink selection
+			drink_selection_water: feature drink_selection -> buttons.Water;
+			drink_selection_milk: feature drink_selection -> buttons.Milk;
+			drink_selection_milk_foam: feature drink_selection -> buttons.MilkFoam;
+			drink_selection_coffee: feature drink_selection -> buttons.Coffee;
+			
+			-- finished
+			finished_signal: feature signalizer.Finished -> display;
   			
+  			-- refillment needed
+  			refillment_needed_signal: feature signalizer.RefillmentNeeded -> display;
 	end CoffeeMachineSystem.impl;
 
 end CoffeeMachineSystem;

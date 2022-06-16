@@ -1,0 +1,15 @@
+package User
+public
+	abstract User
+		features
+			eyes: in feature;
+
+			finger: out feature;
+			milk_supply: out feature;
+			water_supply: out feature;
+			coffee_beans_supply: out feature;
+	end User;
+	
+	abstract implementation User.user
+	end User.user;
+end User;
