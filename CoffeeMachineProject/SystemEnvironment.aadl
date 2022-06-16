@@ -1,0 +1,24 @@
+package SystemEnvironment
+public
+	with CoffeeMachineSystem;
+	with environ;
+	
+	system SystemEnvironment
+	end SystemEnvironment;
+	
+	system implementation SystemEnvironment.impl
+		subcomponents
+			ehevi: abstract environ::operator.ehevi;
+			coffeeMachine: system CoffeeMachineSystem::CoffeeMachineSystem.impl;
+			
+		connections
+		con1: feature ehevi.finger -> coffeeMachine.buttons;
+		inside_system_type_inside_impl_new_connection2: feature coffeeMachine.gpio_bus.Finished -> ehevi.eyes;
+
+		-- inside_system_type_inside_impl_new_connection3: feature ehevi.milk_supply -> coffee_machine.milk_container;
+
+		-- inside_system_type_inside_impl_new_connection4: feature ehevi.coffee_beans_supply -> coffee_machine.coffee_bean_container;
+	
+	end SystemEnvironment.impl;
+
+end SystemEnvironment;

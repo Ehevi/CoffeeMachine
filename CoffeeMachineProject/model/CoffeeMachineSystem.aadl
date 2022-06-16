@@ -1,0 +1,38 @@
+package CoffeeMachineSystem
+public
+	with GpioBus;
+	with MainController;
+	with Display;
+	with Input;
+	with CoffeeMakerSubsystem;
+	
+	system CoffeeMachineSystem
+		features
+			drink_selection: in event data port;
+			milk_container: in event data port;
+			water_container: in event data port;
+			coffee_bean_container: in event data port;
+
+			display: out feature;
+	end CoffeeMachineSystem;
+	 
+	system implementation CoffeeMachineSystem.impl
+		subcomponents			-- devices
+			signalizer: device Display::Display;
+			buttons: device Input::Input;
+			
+			-- subsystem
+			coffee_maker: system CoffeeMakerSubsystem::CoffeeMakerSystem;
+			
+			-- processes and processors
+			main_controller: processor MainController::MainController;
+			
+			-- bus
+  			gpio_bus: bus GpioBus::Gpio;
+  		
+		connections
+			bus_conn: bus access gpio_bus -> main_controller.GpioBusData;
+  			
+	end CoffeeMachineSystem.impl;
+
+end CoffeeMachineSystem;

@@ -1,0 +1,10 @@
+package MainController
+public
+	with GpioBus;
+	
+	processor MainController
+		features
+    		GpioBusData: requires bus access GpioBus::Gpio;
+	end MainController;
+	
+end MainController;

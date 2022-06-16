@@ -1,4 +1,4 @@
-package CoffeMachineDataTypes
+package CoffeeMachineDataTypes
 public
 	with Data_Model;
 	
@@ -51,10 +51,22 @@ public
 	end CoffeeMeasureData;
 	
 	
-	-- Frame
+	-- Signalizer data
+	
+	data RefillmentNeededData
+		properties
+			Data_Model::Data_Representation => Boolean;
+	end RefillmentNeededData;
+	
+	data FinishedData
+		properties
+			Data_Model::Data_Representation => Boolean;
+	end FinishedData;
+	
+	-- Bus frame
 		
-	data BusFrame
+	data GpioBusFrame
 		properties
 			Data_Model::Data_Representation => String;
-	end BusFrame;
-end CoffeMachineDataTypes;
+	end GpioBusFrame;
+end CoffeeMachineDataTypes;

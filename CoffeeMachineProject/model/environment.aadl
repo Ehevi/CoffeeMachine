@@ -6,7 +6,7 @@ public
 		finger: out feature;
 		eyes: in feature;
 		milk_supply: out event port;
-end user;
+	end user;
 
 	abstract implementation user.user_impl
 	end user.user_impl;

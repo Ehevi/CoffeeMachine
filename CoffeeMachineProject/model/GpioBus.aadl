@@ -1,0 +1,5 @@
+package GpioBus
+public
+	bus Gpio
+	end Gpio;
+end GpioBus;

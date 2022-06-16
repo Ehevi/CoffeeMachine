@@ -1,0 +1,16 @@
+package CoffeeMakerSubsystem
+public
+	with Grinder;
+	with Heater;
+	
+	system CoffeeMakerSystem
+	end CoffeeMakerSystem;
+	 
+	system implementation CoffeeMakerSystem.impl
+		subcomponents
+			-- devices
+			grinder: device Grinder::Grinder;
+			heater: device Heater::Heater;
+  			
+	end CoffeeMakerSystem.impl;
+end CoffeeMakerSubsystem;

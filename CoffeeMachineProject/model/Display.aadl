@@ -1,0 +1,11 @@
+package Display
+public
+	with CoffeeMachineDataTypes;
+		
+	device Display
+		features
+			Finished: out data port CoffeeMachineDataTypes::FinishedData;
+			RefillmentNeeded: out data port CoffeeMachineDataTypes::RefillmentNeededData;
+	end Display;
+	
+end Display;
