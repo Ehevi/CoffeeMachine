@@ -22,8 +22,8 @@
 4. Ekspres informuje użytkownika o zakończeniu przygotowywania napoju.
 
 ### Model środowiska i interakcji użytkownika z systemem
-![system_env](https://user-images.githubusercontent.com/48785655/174113547-986bcea8-9058-4b6d-8dec-ccf35d4986a1.png)
-    
+![system_env](https://user-images.githubusercontent.com/48785655/174123763-712a8071-8c97-4cb1-90e6-071942e80cae.png)
+
 ## Spis komponentów wraz z komentarzem
 ## Model - rysunek
 ## Proponowane metody analizy - dostępne w Osate
