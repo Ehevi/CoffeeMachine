@@ -1,0 +1,9 @@
+package Container
+public
+	with CoffeeMachineDataTypes;
+		
+	device Container
+		features
+			RefillmentNeeded: out data port CoffeeMachineDataTypes::RefillmentNeededData;
+	end Container;
+end Container;
