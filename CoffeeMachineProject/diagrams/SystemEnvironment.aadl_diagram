@@ -47,8 +47,8 @@
         <seg>component_instance</seg>
         <seg>coffeeMachine</seg>
       </bo>
-      <position x="400.72784423828125" y="38.0"/>
-      <size width="481.9244613647461" height="260.0"/>
+      <position x="271.0" y="48.0"/>
+      <size width="279.0" height="260.0"/>
     </element>
     <element uuid="888d9b11-4c89-415b-b064-8b990ab63793" manual="true">
       <element uuid="a53d26c9-6fd1-477b-b3f9-cc039829bbe6" manual="true" dockArea="right">
@@ -57,7 +57,7 @@
           <seg>feature_instance</seg>
           <seg>coffee_bean_supply</seg>
         </bo>
-        <position x="224.90493774414062" y="110.0"/>
+        <position x="67.17709350585938" y="110.0"/>
       </element>
       <element uuid="d78f37c9-9118-4241-a870-61494a81dac5" manual="true" dockArea="right">
         <bo>
@@ -65,7 +65,7 @@
           <seg>feature_instance</seg>
           <seg>eyes</seg>
         </bo>
-        <position x="325.4843559265137" y="10.0"/>
+        <position x="167.75651168823242" y="10.0"/>
       </element>
       <element uuid="ea03065b-201b-46ab-8a26-78f9760f0188" manual="true" dockArea="right">
         <bo>
@@ -73,7 +73,7 @@
           <seg>feature_instance</seg>
           <seg>finger</seg>
         </bo>
-        <position x="317.7304496765137" y="60.0"/>
+        <position x="160.00260543823242" y="60.0"/>
       </element>
       <element uuid="586aba06-8e81-4999-a973-4ae09deacb2f" manual="true" dockArea="right">
         <bo>
@@ -81,7 +81,7 @@
           <seg>feature_instance</seg>
           <seg>milk_supply</seg>
         </bo>
-        <position x="278.02342224121094" y="210.0"/>
+        <position x="120.29557800292969" y="210.0"/>
       </element>
       <element uuid="5b1d29eb-46b9-4866-9deb-42e1e81ea5a4" manual="true" dockArea="right">
         <bo>
@@ -89,15 +89,15 @@
           <seg>feature_instance</seg>
           <seg>water_supply</seg>
         </bo>
-        <position x="268.1536331176758" y="160.0"/>
+        <position x="110.42578887939453" y="160.0"/>
       </element>
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>component_instance</seg>
         <seg>user</seg>
       </bo>
-      <position x="12.0" y="38.0"/>
-      <size width="368.72784423828125" height="260.0"/>
+      <position x="40.0" y="48.0"/>
+      <size width="211.0" height="260.0"/>
     </element>
     <element uuid="3a53d3a2-897a-43f6-84ab-ab012086cb3e" manual="true">
       <bo>
@@ -146,8 +146,8 @@
       <seg>system_instance</seg>
       <seg>/coffeemachineproject/instances/systemenvironment.aaxl2</seg>
     </bo>
-    <position/>
-    <size width="894.6522827148438" height="310.0"/>
+    <position x="220.0" y="110.0"/>
+    <size width="580.0" height="340.0"/>
   </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>
