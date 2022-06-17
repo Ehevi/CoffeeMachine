@@ -4,6 +4,7 @@ public
 	with MainController;
 	with Display;
 	with Input;
+	with Container;
 	with CoffeeMakerSubsystem;
 	
 	system CoffeeMachineSystem
@@ -17,9 +18,15 @@ public
 	end CoffeeMachineSystem;
 	 
 	system implementation CoffeeMachineSystem.impl
-		subcomponents			-- devices
+		subcomponents
+			-- devices
 			signalizer: device Display::Display;
 			buttons: device Input::Input;
+			
+			-- containers
+			milk_container_sensor: device Container::Container;
+			water_container_sensor: device Container::Container;
+			coffee_bean_container_sensor: device Container::Container;
 			
 			-- subsystem
 			coffee_maker: system CoffeeMakerSubsystem::CoffeeMakerSystem;
