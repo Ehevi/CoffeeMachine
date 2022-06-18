@@ -40,7 +40,7 @@
         <seg>buttons</seg>
       </bo>
       <position x="170.0" y="30.0"/>
-      <size width="254.1640510559082" height="210.0"/>
+      <size width="254.0" height="210.0"/>
     </element>
     <element uuid="44b2dacf-13cd-4d21-b375-0d0e5d63c3b4" manual="true">
       <element uuid="f615ff1a-25ad-4145-b12a-1080dfebc2d7" manual="true" dockArea="left">
@@ -57,7 +57,7 @@
         <seg>coffee_bean_container_sensor</seg>
       </bo>
       <position x="280.0" y="260.0"/>
-      <size width="517.2434539794922" height="60.0"/>
+      <size width="517.0" height="60.0"/>
     </element>
     <element uuid="8fcb14a9-2b2e-4d08-bd12-2bd09ab8fe11" manual="true">
       <bo>
@@ -66,7 +66,7 @@
         <seg>coffee_maker</seg>
       </bo>
       <position x="1190.0" y="270.0"/>
-      <size width="142.51432037353516" height="35.0"/>
+      <size width="143.0" height="35.0"/>
     </element>
     <element uuid="ca3b108e-e3ba-4933-8eb9-4e6a5d19d4dd" manual="true">
       <bo>
@@ -75,7 +75,7 @@
         <seg>gpio_bus</seg>
       </bo>
       <position x="570.0" y="50.0"/>
-      <size width="111.31640625" height="35.0"/>
+      <size width="111.0" height="35.0"/>
     </element>
     <element uuid="841f553c-13f1-4028-9d31-1a9ef6a042e5" manual="true">
       <element uuid="35def6c4-a5e5-4a0b-8676-616ad4db40e3" manual="true" dockArea="left">
@@ -91,8 +91,8 @@
         <seg>component_instance</seg>
         <seg>main_controller</seg>
       </bo>
-      <position x="620.0" y="200.0"/>
-      <size width="353.9557342529297" height="60.0"/>
+      <position x="710.0" y="120.0"/>
+      <size width="354.0" height="60.0"/>
     </element>
     <element uuid="faf389ab-8d26-45fd-bfee-498ee84bdddd" manual="true">
       <element uuid="5b72a285-0217-4525-abe3-08e339b64a92" manual="true" dockArea="left">
@@ -109,7 +109,7 @@
         <seg>milk_container_sensor</seg>
       </bo>
       <position x="280.0" y="340.0"/>
-      <size width="464.12498474121094" height="60.0"/>
+      <size width="464.0" height="60.0"/>
     </element>
     <element uuid="4ea1b83a-3374-4786-89ad-a7570ca585bd" manual="true">
       <element uuid="7bde3614-9b34-4d55-b8f3-d6fa9923a52e" manual="true" dockArea="right">
@@ -118,7 +118,7 @@
           <seg>feature_instance</seg>
           <seg>Finished</seg>
         </bo>
-        <position x="311.5455627441406" y="60.0"/>
+        <position x="311.40755462646484" y="60.0"/>
       </element>
       <element uuid="ee429312-edef-4dc9-bd68-3cfe1c185a6b" manual="true" dockArea="right">
         <bo>
@@ -126,15 +126,15 @@
           <seg>feature_instance</seg>
           <seg>RefillmentNeeded</seg>
         </bo>
-        <position x="247.48306274414062" y="10.0"/>
+        <position x="247.34505462646484" y="10.0"/>
       </element>
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>component_instance</seg>
         <seg>signalizer</seg>
       </bo>
-      <position x="1221.3215942382812" y="38.0"/>
-      <size width="379.1380081176758" height="110.0"/>
+      <position x="1221.0" y="38.0"/>
+      <size width="379.0" height="110.0"/>
     </element>
     <element uuid="e23033a1-e5b5-46df-a4dc-e0ed1b994f4a" manual="true">
       <element uuid="b1b718ea-c769-4173-abed-4576dc458b14" manual="true" dockArea="left">
@@ -151,7 +151,7 @@
         <seg>water_container_sensor</seg>
       </bo>
       <position x="280.0" y="420.0"/>
-      <size width="473.99476623535156" height="60.0"/>
+      <size width="474.0" height="60.0"/>
     </element>
     <element uuid="170e1f2d-4f30-46be-8bb2-30e03d6118a8" manual="true">
       <bo>
@@ -159,9 +159,6 @@
         <seg>connection_reference</seg>
         <seg>bus_conn : CoffeeMachineSystem_impl_Instance.gpio_bus -> CoffeeMachineSystem_impl_Instance.main_controller.GpioBusData</seg>
       </bo>
-      <bendpoints>
-        <point x="83.0" y="307.0"/>
-      </bendpoints>
     </element>
     <element uuid="23ab2257-d39e-49ee-b1eb-01fa7ec0a1cc" manual="true">
       <bo>
@@ -169,9 +166,6 @@
         <seg>connection_reference</seg>
         <seg>drink_selection_coffee : CoffeeMachineSystem_impl_Instance.drink_selection -> CoffeeMachineSystem_impl_Instance.buttons.Coffee</seg>
       </bo>
-      <bendpoints>
-        <point x="-481.0" y="321.0"/>
-      </bendpoints>
     </element>
     <element uuid="25317d03-e5bc-4059-a35d-e29cb773c3bd" manual="true">
       <bo>
@@ -179,9 +173,6 @@
         <seg>connection_reference</seg>
         <seg>drink_selection_milk : CoffeeMachineSystem_impl_Instance.drink_selection -> CoffeeMachineSystem_impl_Instance.buttons.Milk</seg>
       </bo>
-      <bendpoints>
-        <point x="-446.0" y="251.0"/>
-      </bendpoints>
     </element>
     <element uuid="47f85b12-3b0d-4799-8356-1cf907494b90" manual="true">
       <bo>
@@ -196,9 +187,6 @@
         <seg>connection_reference</seg>
         <seg>drink_selection_water : CoffeeMachineSystem_impl_Instance.drink_selection -> CoffeeMachineSystem_impl_Instance.buttons.Water</seg>
       </bo>
-      <bendpoints>
-        <point x="-492.0" y="344.0"/>
-      </bendpoints>
     </element>
     <element uuid="c467f4bf-10d3-4fd4-9c26-2d2c07c93cc6" manual="true">
       <bo>
@@ -206,10 +194,6 @@
         <seg>connection_reference</seg>
         <seg>finished_signal : CoffeeMachineSystem_impl_Instance.signalizer.Finished -> CoffeeMachineSystem_impl_Instance.display</seg>
       </bo>
-      <bendpoints>
-        <point x="1100.4595947265625" y="250.0"/>
-        <point x="1100.4595947265625" y="200.0"/>
-      </bendpoints>
     </element>
     <element uuid="b4052d0e-f12f-4cf7-8e92-83a336b55a95" manual="true">
       <bo>
@@ -232,7 +216,7 @@
         <seg>feature_instance</seg>
         <seg>display</seg>
       </bo>
-      <position x="1795.5403137207031" y="40.0"/>
+      <position x="1795.65625" y="40.0"/>
     </element>
     <element uuid="2ff996c8-7689-4b6b-97b1-c1364eda5d5f" manual="true" dockArea="left">
       <bo>
@@ -240,7 +224,7 @@
         <seg>feature_instance</seg>
         <seg>drink_selection</seg>
       </bo>
-      <position y="48.0"/>
+      <position y="30.0"/>
     </element>
     <element uuid="53280ab0-182e-4236-b7f9-a77f7662bd99" manual="true" dockArea="left">
       <bo>
@@ -263,8 +247,8 @@
       <seg>system_instance</seg>
       <seg>/coffeemachineproject/model/instances/coffeemachinesystem_coffeemachinesystem_impl_instance.aaxl2</seg>
     </bo>
-    <position x="-510.0" y="120.0"/>
-    <size width="1854.8840637207031" height="610.0"/>
+    <position x="-630.0" y="170.0"/>
+    <size width="1855.0" height="610.0"/>
   </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>
