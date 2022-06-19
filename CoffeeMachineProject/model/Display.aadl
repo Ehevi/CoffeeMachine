@@ -4,6 +4,7 @@ public
 		
 	device Display
 		features
+			CoffeeRefillmentNeeded: in data port CoffeeMachineDataTypes::RefillmentNeededData;
 			Finished: out data port CoffeeMachineDataTypes::FinishedData;
 			RefillmentNeeded: out data port CoffeeMachineDataTypes::RefillmentNeededData;
 	end Display;

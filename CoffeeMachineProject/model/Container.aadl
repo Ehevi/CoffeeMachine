@@ -4,6 +4,7 @@ public
 		
 	device Container
 		features
+			Replenished: in data port CoffeeMachineDataTypes::RefillmentNeededData;
 			RefillmentNeeded: out data port CoffeeMachineDataTypes::RefillmentNeededData;
 	end Container;
 end Container;
