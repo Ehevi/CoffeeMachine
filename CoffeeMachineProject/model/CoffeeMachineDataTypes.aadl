@@ -55,7 +55,7 @@ public
 	
 	data RefillmentNeededData
 		properties
-			Data_Model::Data_Representation => Boolean;
+			Data_Model::Data_Representation => Integer;
 	end RefillmentNeededData;
 	
 	data FinishedData

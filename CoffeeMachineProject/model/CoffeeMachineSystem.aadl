@@ -54,9 +54,13 @@ public
   			
   			-- refillment needed signal from containers
   			coffee_refillment_needed: feature coffee_bean_container_sensor.refillmentNeeded -> signalizer.CoffeeRefillmentNeeded;
+  			milk_refillment_needed: feature milk_container_sensor.refillmentNeeded -> signalizer.MilkRefillmentNeeded;
+  			water_refillment_needed: feature water_container_sensor.refillmentNeeded -> signalizer.WaterRefillmentNeeded;
   			
   			-- replenish signal
   			coffee_replenish: feature coffee_bean_container -> coffee_bean_container_sensor.replenished;
+  			milk_replelish: feature milk_container -> milk_container_sensor.replenished;
+  			water_replenish: feature water_container -> water_container_sensor.replenished;
 	end CoffeeMachineSystem.impl;
 
 end CoffeeMachineSystem;
