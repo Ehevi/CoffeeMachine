@@ -3,6 +3,7 @@ public
 	abstract User
 		features
 			eyes: in feature;
+			hands: in feature;
 
 			finger: out feature;
 			milk_supply: out feature;

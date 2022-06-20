@@ -18,6 +18,7 @@ public
 			milk_refillment: feature user.milk_supply -> coffeeMachine.milk_container;
 			water_refillment: feature user.water_supply -> coffeeMachine.water_container;
 			coffee_refillment: feature user.coffee_bean_supply -> coffeeMachine.coffee_bean_container;
+			coffee_collection: feature coffeeMachine.coffee -> user.hands;
 	
 	end SystemEnvironment.impl;
 

@@ -15,6 +15,7 @@ public
 			coffee_bean_container: in event data port;
 
 			display: out feature;
+			coffee: out feature;
 	end CoffeeMachineSystem;
 	 
 	system implementation CoffeeMachineSystem.impl
