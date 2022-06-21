@@ -64,9 +64,9 @@ public
   			coffee_preparation_finished: bus access gpio_bus -> signalizer.GpioBusData;
   			
   			-- refillment needed signal
-  			milk_supplies_process_handler: feature milk_container_sensor.StockLevel -> supplies_process.stock_level;
-  			water_supplies_process_handler: feature water_container_sensor.StockLevel -> supplies_process.stock_level;
-  			coffee_supplies_process_handler: feature coffee_bean_container_sensor.StockLevel -> supplies_process.stock_level;
+  			milk_supplies_process_handler: feature milk_container_sensor.StockLevel -> supplies_process.reserves;
+  			water_supplies_process_handler: feature water_container_sensor.StockLevel -> supplies_process.reserves;
+  			coffee_supplies_process_handler: feature coffee_bean_container_sensor.StockLevel -> supplies_process.reserves;
   			milk_sensor_gpio: bus access gpio_bus -> milk_container_sensor.GpioBusData;
   			water_sensor_gpio: bus access gpio_bus -> water_container_sensor.GpioBusData;
   			coffee_sensor_gpio: bus access gpio_bus -> coffee_bean_container_sensor.GpioBusData;

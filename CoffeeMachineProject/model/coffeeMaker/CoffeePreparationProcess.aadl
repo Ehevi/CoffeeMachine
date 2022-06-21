@@ -1,0 +1,13 @@
+package CoffeePreparationProcess
+public
+	process CoffeePreparationProcess
+		features
+			instruction: in data port;
+			
+			heat: out data port;
+			foam: out data port;
+			grind: out data port;
+			prepare_coffee: out data port;
+			pour: out data port;
+	end CoffeePreparationProcess;
+end CoffeePreparationProcess;

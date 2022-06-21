@@ -1,0 +1,7 @@
+package Foamer
+public
+	device Foamer
+		features
+			make_foam: in data port;
+	end Foamer;
+end Foamer;

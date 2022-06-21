@@ -234,7 +234,7 @@
     <classifier xsi:type="aadl2:ProcessType" href="../DrinkSelectionProcess.aadl#DrinkSelectionProcess.DrinkSelectionProcess"/>
   </componentInstance>
   <componentInstance name="supplies_process" category="process">
-    <featureInstance name="stock_level">
+    <featureInstance name="reserves">
       <feature xsi:type="aadl2:DataPort" href="../SuppliesProcess.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
     <featureInstance name="RefillmentNeeded" direction="out">
@@ -345,17 +345,17 @@
       <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.1"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance name="milk_container_sensor.StockLevel -> supplies_process.stock_level" complete="true" kind="portConnection" destination="//@componentInstance.7/@featureInstance.0" source="//@componentInstance.3/@featureInstance.1">
+  <connectionInstance name="milk_container_sensor.StockLevel -> supplies_process.reserves" complete="true" kind="portConnection" destination="//@componentInstance.7/@featureInstance.0" source="//@componentInstance.3/@featureInstance.1">
     <connectionReference context="/" source="//@componentInstance.3/@featureInstance.1" destination="//@componentInstance.7/@featureInstance.0">
       <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.8"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance name="water_container_sensor.StockLevel -> supplies_process.stock_level" complete="true" kind="portConnection" destination="//@componentInstance.7/@featureInstance.0" source="//@componentInstance.4/@featureInstance.1">
+  <connectionInstance name="water_container_sensor.StockLevel -> supplies_process.reserves" complete="true" kind="portConnection" destination="//@componentInstance.7/@featureInstance.0" source="//@componentInstance.4/@featureInstance.1">
     <connectionReference context="/" source="//@componentInstance.4/@featureInstance.1" destination="//@componentInstance.7/@featureInstance.0">
       <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.9"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance name="coffee_bean_container_sensor.StockLevel -> supplies_process.stock_level" complete="true" kind="portConnection" destination="//@componentInstance.7/@featureInstance.0" source="//@componentInstance.5/@featureInstance.1">
+  <connectionInstance name="coffee_bean_container_sensor.StockLevel -> supplies_process.reserves" complete="true" kind="portConnection" destination="//@componentInstance.7/@featureInstance.0" source="//@componentInstance.5/@featureInstance.1">
     <connectionReference context="/" source="//@componentInstance.5/@featureInstance.1" destination="//@componentInstance.7/@featureInstance.0">
       <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.10"/>
     </connectionReference>

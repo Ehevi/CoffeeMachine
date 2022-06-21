@@ -1,0 +1,7 @@
+package CoffeePress
+public
+	device CoffeePress
+		features
+			prepare_coffee: in data port;
+	end CoffeePress;
+end CoffeePress;

@@ -4,7 +4,7 @@ public
 	
 	process SuppliesProcess
 		features
-			stock_level: in data port;
+			reserves: in data port;
 			RefillmentNeeded: out data port CoffeeMachineDataTypes::RefillmentNeededData;
 			
 	end SuppliesProcess;

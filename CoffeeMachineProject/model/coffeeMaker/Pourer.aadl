@@ -1,0 +1,8 @@
+package Pourer
+public
+	device Pourer
+		features
+			pour: out data port;
+			pour_command: in data port;
+	end Pourer;
+end Pourer;

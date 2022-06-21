@@ -1,0 +1,7 @@
+package TempSensor
+public
+	device TempSensor
+		features
+			temperature: out data port;
+	end TempSensor;
+end TempSensor;

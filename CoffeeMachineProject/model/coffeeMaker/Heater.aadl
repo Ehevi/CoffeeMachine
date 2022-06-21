@@ -1,5 +1,7 @@
 package Heater
 public
 	device Heater
+		features
+			heat: in data port;
 	end Heater;
 end Heater;

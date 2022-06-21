@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="CoffeeMakerSystem_impl_Instance" category="system">
+  <featureInstance name="coffeeInstruction" category="abstractFeature">
+    <feature xsi:type="aadl2:AbstractFeature" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedAbstractFeature.0"/>
+  </featureInstance>
+  <featureInstance name="coffee" category="abstractFeature" direction="out">
+    <feature xsi:type="aadl2:AbstractFeature" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedAbstractFeature.1"/>
+  </featureInstance>
+  <featureInstance name="GpioBusData" category="busAccess">
+    <feature xsi:type="aadl2:BusAccess" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.0"/>
+  </featureInstance>
+  <componentInstance name="grinder" category="device">
+    <featureInstance name="grind">
+      <feature xsi:type="aadl2:DataPort" href="../Grinder.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Grinder.aadl#Grinder.Grinder"/>
+  </componentInstance>
+  <componentInstance name="heater" category="device">
+    <featureInstance name="heat">
+      <feature xsi:type="aadl2:DataPort" href="../Heater.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Heater.aadl#Heater.Heater"/>
+  </componentInstance>
+  <componentInstance name="foamer" category="device">
+    <featureInstance name="make_foam">
+      <feature xsi:type="aadl2:DataPort" href="../Foamer.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.2"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Foamer.aadl#Foamer.Foamer"/>
+  </componentInstance>
+  <componentInstance name="press" category="device">
+    <featureInstance name="prepare_coffee">
+      <feature xsi:type="aadl2:DataPort" href="../CoffeePress.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.3"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../CoffeePress.aadl#CoffeePress.CoffeePress"/>
+  </componentInstance>
+  <componentInstance name="analyzer" category="device">
+    <featureInstance name="temperature">
+      <feature xsi:type="aadl2:DataPort" href="../Analyzer.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="instruction">
+      <feature xsi:type="aadl2:DataPort" href="../Analyzer.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="instruction_handler" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../Analyzer.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.4"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Analyzer.aadl#Analyzer.Analyzer"/>
+  </componentInstance>
+  <componentInstance name="pourer" category="device">
+    <featureInstance name="pour" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../Pourer.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="pour_command">
+      <feature xsi:type="aadl2:DataPort" href="../Pourer.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.5"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Pourer.aadl#Pourer.Pourer"/>
+  </componentInstance>
+  <componentInstance name="temp_sensor" category="device">
+    <featureInstance name="temperature" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../TempSensor.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.6"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../TempSensor.aadl#TempSensor.TempSensor"/>
+  </componentInstance>
+  <componentInstance name="coffee_making_process" category="process">
+    <featureInstance name="instruction">
+      <feature xsi:type="aadl2:DataPort" href="../CoffeePreparationProcess.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="heat" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../CoffeePreparationProcess.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="foam" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../CoffeePreparationProcess.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance name="grind" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../CoffeePreparationProcess.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.3"/>
+    </featureInstance>
+    <featureInstance name="prepare_coffee" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../CoffeePreparationProcess.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.4"/>
+    </featureInstance>
+    <featureInstance name="pour" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../CoffeePreparationProcess.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.5"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessType" href="../CoffeePreparationProcess.aadl#CoffeePreparationProcess.CoffeePreparationProcess"/>
+  </componentInstance>
+  <componentInstance name="coffee_controller" category="processor">
+    <featureInstance name="GpioBusData" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../CoffeeController.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessorType" href="../CoffeeController.aadl#CoffeeController.CoffeeController"/>
+  </componentInstance>
+  <connectionInstance name="coffeeInstruction -> analyzer.instruction" destination="//@componentInstance.4/@featureInstance.1" source="//@featureInstance.0">
+    <connectionReference context="/" source="//@featureInstance.0" destination="//@componentInstance.4/@featureInstance.1">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="GpioBusData -> coffee_controller.GpioBusData" kind="accessConnection" destination="//@componentInstance.8/@featureInstance.0" source="//@featureInstance.2">
+    <connectionReference context="/" source="//@featureInstance.2" destination="//@componentInstance.8/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="analyzer.instruction_handler -> coffee_making_process.instruction" complete="true" kind="portConnection" destination="//@componentInstance.7/@featureInstance.0" source="//@componentInstance.4/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.4/@featureInstance.2" destination="//@componentInstance.7/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="pourer.pour -> coffee" destination="//@featureInstance.1" source="//@componentInstance.5/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.5/@featureInstance.0" destination="//@featureInstance.1">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="temp_sensor.temperature -> analyzer.temperature" complete="true" kind="portConnection" destination="//@componentInstance.4/@featureInstance.0" source="//@componentInstance.6/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.6/@featureInstance.0" destination="//@componentInstance.4/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="coffee_making_process.heat -> heater.heat" complete="true" kind="portConnection" destination="//@componentInstance.1/@featureInstance.0" source="//@componentInstance.7/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.7/@featureInstance.1" destination="//@componentInstance.1/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.7"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="coffee_making_process.foam -> foamer.make_foam" complete="true" kind="portConnection" destination="//@componentInstance.2/@featureInstance.0" source="//@componentInstance.7/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.7/@featureInstance.2" destination="//@componentInstance.2/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="coffee_making_process.grind -> grinder.grind" complete="true" kind="portConnection" destination="//@componentInstance.0/@featureInstance.0" source="//@componentInstance.7/@featureInstance.3">
+    <connectionReference context="/" source="//@componentInstance.7/@featureInstance.3" destination="//@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.8"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="coffee_making_process.prepare_coffee -> press.prepare_coffee" complete="true" kind="portConnection" destination="//@componentInstance.3/@featureInstance.0" source="//@componentInstance.7/@featureInstance.4">
+    <connectionReference context="/" source="//@componentInstance.7/@featureInstance.4" destination="//@componentInstance.3/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="coffee_making_process.pour -> pourer.pour_command" complete="true" kind="portConnection" destination="//@componentInstance.5/@featureInstance.1" source="//@componentInstance.7/@featureInstance.5">
+    <connectionReference context="/" source="//@componentInstance.7/@featureInstance.5" destination="//@componentInstance.5/@featureInstance.1">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <systemOperationMode name="No Modes"/>
+  <componentImplementation xsi:type="aadl2:SystemImplementation" href="../CoffeeMakerSubsystem.aadl#CoffeeMakerSubsystem.CoffeeMakerSystem.impl"/>
+</instance:SystemInstance>

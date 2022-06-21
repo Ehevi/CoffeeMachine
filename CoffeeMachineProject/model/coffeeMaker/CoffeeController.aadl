@@ -1,0 +1,9 @@
+package CoffeeController
+public
+	with GpioBus;
+	
+	processor CoffeeController
+		features
+    		GpioBusData: requires bus access GpioBus::Gpio;
+	end CoffeeController;
+end CoffeeController;

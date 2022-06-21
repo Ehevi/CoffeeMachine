@@ -1,0 +1,10 @@
+package Analyzer
+public
+	device Analyzer
+		features
+			temperature: in data port;
+			instruction: in data port;
+			
+			instruction_handler: out data port;
+	end Analyzer;
+end Analyzer;

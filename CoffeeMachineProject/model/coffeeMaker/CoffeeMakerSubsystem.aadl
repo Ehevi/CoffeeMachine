@@ -2,6 +2,13 @@ package CoffeeMakerSubsystem
 public
 	with Grinder;
 	with Heater;
+	with Foamer;
+	with CoffeePress;
+	with Analyzer;
+	with TempSensor;
+	with Pourer;
+	with CoffeePreparationProcess;
+	with CoffeeController;
 	with GpioBus;
 	
 	system CoffeeMakerSystem
@@ -17,6 +24,35 @@ public
 			-- devices
 			grinder: device Grinder::Grinder;
 			heater: device Heater::Heater;
+			foamer: device Foamer::Foamer;
+			press: device CoffeePress::CoffeePress;
+			analyzer: device Analyzer::Analyzer;
+			pourer: device Pourer::Pourer;
+			temp_sensor: device TempSensor::TempSensor;
+			
+			coffee_controller: processor CoffeeController::CoffeeController;
+			coffee_making_process: process CoffeePreparationProcess::CoffeePreparationProcess;
+			
+		connections
+			temp_measure: feature temp_sensor.temperature -> analyzer.temperature;
+			
+			-- instructions
+			instructions: feature coffeeInstruction -> analyzer.instruction;
+			instruction_handling: feature analyzer.instruction_handler -> coffee_making_process.instruction;
+			
+			-- coffee pouring
+			coffee_pouring: feature pourer.pour -> coffee;
+			
+			-- threads
+			make_coffee: feature coffee_making_process.prepare_coffee -> press.prepare_coffee;
+			pour: feature coffee_making_process.pour -> pourer.pour_command;
+			foam: feature coffee_making_process.foam -> foamer.make_foam;
+			heat: feature coffee_making_process.heat -> heater.heat;
+			grind: feature coffee_making_process.grind -> grinder.grind;
+			
+			-- gpio bus data
+			controller_connection: bus access GpioBusData -> coffee_controller.GpioBusData;
+			-- buttons_connection: bus access gpio_bus -> buttons.GpioBusData;
 
 	end CoffeeMakerSystem.impl;
 end CoffeeMakerSubsystem;

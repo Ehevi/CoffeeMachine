@@ -1,5 +1,7 @@
 package Grinder
 public
 	device Grinder
+		features
+			grind: in data port;
 	end Grinder;
 end Grinder;
