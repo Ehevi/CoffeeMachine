@@ -1,0 +1,15 @@
+package DrinkSelectionProcess
+public
+	with CoffeeMachineDataTypes;
+	
+	process DrinkSelectionProcess
+		features
+			drink_type: in event port;
+		
+			Water: out data port CoffeeMachineDataTypes::WaterData;
+			Milk: out data port CoffeeMachineDataTypes::MilkData;
+			MilkFoam: out data port CoffeeMachineDataTypes::MilkFoamData;
+			Coffee: out data port CoffeeMachineDataTypes::CoffeeData;
+			
+	end DrinkSelectionProcess;
+end DrinkSelectionProcess;

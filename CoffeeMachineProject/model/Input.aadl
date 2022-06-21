@@ -1,13 +1,12 @@
 package Input
-public
-	with CoffeeMachineDataTypes;
-		
+public		
+	with GpioBus;
 	device Input
 		features
-			Water: in data port CoffeeMachineDataTypes::WaterData;
-			Milk: in data port CoffeeMachineDataTypes::MilkData;
-			MilkFoam: in data port CoffeeMachineDataTypes::MilkFoamData;
-			Coffee: in data port CoffeeMachineDataTypes::CoffeeData;
+			DrinkSelection: in event data port;
+			DrinkSelectionHandler: out data port;
+			
+			GpioBusData: requires bus access GpioBus::Gpio;
 	end Input;
 	
 end Input;

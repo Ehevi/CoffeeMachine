@@ -1,10 +1,12 @@
 package Container
 public
 	with CoffeeMachineDataTypes;
+	with GpioBus;
 		
 	device Container
 		features
 			Replenished: in data port CoffeeMachineDataTypes::RefillmentNeededData;
-			RefillmentNeeded: out data port CoffeeMachineDataTypes::RefillmentNeededData;
+			StockLevel: out data port CoffeeMachineDataTypes::RefillmentNeededData;
+			GpioBusData: requires bus access GpioBus::Gpio;
 	end Container;
 end Container;

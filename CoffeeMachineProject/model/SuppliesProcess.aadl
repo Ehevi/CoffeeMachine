@@ -1,0 +1,11 @@
+package SuppliesProcess
+public
+	with CoffeeMachineDataTypes;
+	
+	process SuppliesProcess
+		features
+			stock_level: in data port;
+			RefillmentNeeded: out data port CoffeeMachineDataTypes::RefillmentNeededData;
+			
+	end SuppliesProcess;
+end SuppliesProcess;

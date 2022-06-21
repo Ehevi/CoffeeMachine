@@ -3,6 +3,9 @@
   <featureInstance name="display" category="abstractFeature" direction="out">
     <feature xsi:type="aadl2:AbstractFeature" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedAbstractFeature.0"/>
   </featureInstance>
+  <featureInstance name="coffee" category="abstractFeature" direction="out">
+    <feature xsi:type="aadl2:AbstractFeature" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedAbstractFeature.1"/>
+  </featureInstance>
   <featureInstance name="drink_selection" category="eventDataPort">
     <feature xsi:type="aadl2:EventDataPort" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
   </featureInstance>
@@ -21,7 +24,7 @@
     <classifier xsi:type="aadl2:BusType" href="../GpioBus.aadl#GpioBus.Gpio"/>
   </componentInstance>
   <componentInstance name="signalizer" category="device">
-    <featureInstance name="WaterRefillmentNeeded">
+    <featureInstance name="RefillmentNeededSignal">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
         <ownedValue>
@@ -33,30 +36,6 @@
       </ownedPropertyAssociation>
       <feature xsi:type="aadl2:DataPort" href="../Display.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance name="MilkRefillmentNeeded">
-      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
-        <ownedValue>
-          <ownedValue xsi:type="aadl2:NamedValue">
-            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
-          </ownedValue>
-        </ownedValue>
-        <propertyAssociation href="../CoffeeMachineDataTypes.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
-      </ownedPropertyAssociation>
-      <feature xsi:type="aadl2:DataPort" href="../Display.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
-    </featureInstance>
-    <featureInstance name="CoffeeRefillmentNeeded">
-      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
-        <ownedValue>
-          <ownedValue xsi:type="aadl2:NamedValue">
-            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
-          </ownedValue>
-        </ownedValue>
-        <propertyAssociation href="../CoffeeMachineDataTypes.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
-      </ownedPropertyAssociation>
-      <feature xsi:type="aadl2:DataPort" href="../Display.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
-    </featureInstance>
     <featureInstance name="Finished" direction="out">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
@@ -67,7 +46,7 @@
         </ownedValue>
         <propertyAssociation href="../CoffeeMachineDataTypes.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
-      <feature xsi:type="aadl2:DataPort" href="../Display.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.3"/>
+      <feature xsi:type="aadl2:DataPort" href="../Display.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
     </featureInstance>
     <featureInstance name="RefillmentNeeded" direction="out">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -79,60 +58,24 @@
         </ownedValue>
         <propertyAssociation href="../CoffeeMachineDataTypes.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
-      <feature xsi:type="aadl2:DataPort" href="../Display.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.4"/>
+      <feature xsi:type="aadl2:DataPort" href="../Display.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance name="GpioBusData" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../Display.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.0"/>
     </featureInstance>
     <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.0"/>
     <index>0</index>
     <classifier xsi:type="aadl2:DeviceType" href="../Display.aadl#Display.Display"/>
   </componentInstance>
   <componentInstance name="buttons" category="device">
-    <featureInstance name="Water">
-      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
-        <ownedValue>
-          <ownedValue xsi:type="aadl2:NamedValue">
-            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
-          </ownedValue>
-        </ownedValue>
-        <propertyAssociation href="../CoffeeMachineDataTypes.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
-      </ownedPropertyAssociation>
+    <featureInstance name="DrinkSelectionHandler" direction="out">
       <feature xsi:type="aadl2:DataPort" href="../Input.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance name="Milk">
-      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
-        <ownedValue>
-          <ownedValue xsi:type="aadl2:NamedValue">
-            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
-          </ownedValue>
-        </ownedValue>
-        <propertyAssociation href="../CoffeeMachineDataTypes.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
-      </ownedPropertyAssociation>
-      <feature xsi:type="aadl2:DataPort" href="../Input.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    <featureInstance name="DrinkSelection" category="eventDataPort">
+      <feature xsi:type="aadl2:EventDataPort" href="../Input.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventDataPort.0"/>
     </featureInstance>
-    <featureInstance name="MilkFoam">
-      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
-        <ownedValue>
-          <ownedValue xsi:type="aadl2:NamedValue">
-            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
-          </ownedValue>
-        </ownedValue>
-        <propertyAssociation href="../CoffeeMachineDataTypes.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
-      </ownedPropertyAssociation>
-      <feature xsi:type="aadl2:DataPort" href="../Input.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
-    </featureInstance>
-    <featureInstance name="Coffee">
-      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
-        <ownedValue>
-          <ownedValue xsi:type="aadl2:NamedValue">
-            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
-          </ownedValue>
-        </ownedValue>
-        <propertyAssociation href="../CoffeeMachineDataTypes.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.0"/>
-      </ownedPropertyAssociation>
-      <feature xsi:type="aadl2:DataPort" href="../Input.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.3"/>
+    <featureInstance name="GpioBusData" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../Input.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.0"/>
     </featureInstance>
     <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.1"/>
     <index>0</index>
@@ -151,7 +94,7 @@
       </ownedPropertyAssociation>
       <feature xsi:type="aadl2:DataPort" href="../Container.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance name="RefillmentNeeded" direction="out">
+    <featureInstance name="StockLevel" direction="out">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
         <ownedValue>
@@ -162,6 +105,9 @@
         <propertyAssociation href="../CoffeeMachineDataTypes.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <feature xsi:type="aadl2:DataPort" href="../Container.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="GpioBusData" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../Container.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.0"/>
     </featureInstance>
     <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.2"/>
     <index>0</index>
@@ -180,7 +126,7 @@
       </ownedPropertyAssociation>
       <feature xsi:type="aadl2:DataPort" href="../Container.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance name="RefillmentNeeded" direction="out">
+    <featureInstance name="StockLevel" direction="out">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
         <ownedValue>
@@ -191,6 +137,9 @@
         <propertyAssociation href="../CoffeeMachineDataTypes.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <feature xsi:type="aadl2:DataPort" href="../Container.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="GpioBusData" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../Container.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.0"/>
     </featureInstance>
     <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.3"/>
     <index>0</index>
@@ -209,7 +158,7 @@
       </ownedPropertyAssociation>
       <feature xsi:type="aadl2:DataPort" href="../Container.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
     </featureInstance>
-    <featureInstance name="RefillmentNeeded" direction="out">
+    <featureInstance name="StockLevel" direction="out">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
         <ownedValue>
@@ -221,9 +170,88 @@
       </ownedPropertyAssociation>
       <feature xsi:type="aadl2:DataPort" href="../Container.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
     </featureInstance>
+    <featureInstance name="GpioBusData" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../Container.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.0"/>
+    </featureInstance>
     <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.4"/>
     <index>0</index>
     <classifier xsi:type="aadl2:DeviceType" href="../Container.aadl#Container.Container"/>
+  </componentInstance>
+  <componentInstance name="drink_selection_process" category="process">
+    <featureInstance name="Water" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../CoffeeMachineDataTypes.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../DrinkSelectionProcess.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="Milk" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../CoffeeMachineDataTypes.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../DrinkSelectionProcess.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="MilkFoam" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../CoffeeMachineDataTypes.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../DrinkSelectionProcess.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance name="Coffee" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../CoffeeMachineDataTypes.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../DrinkSelectionProcess.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.3"/>
+    </featureInstance>
+    <featureInstance name="drink_type" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../DrinkSelectionProcess.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventPort.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessType" href="../DrinkSelectionProcess.aadl#DrinkSelectionProcess.DrinkSelectionProcess"/>
+  </componentInstance>
+  <componentInstance name="supplies_process" category="process">
+    <featureInstance name="stock_level">
+      <feature xsi:type="aadl2:DataPort" href="../SuppliesProcess.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="RefillmentNeeded" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../CoffeeMachineDataTypes.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../SuppliesProcess.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessType" href="../SuppliesProcess.aadl#SuppliesProcess.SuppliesProcess"/>
   </componentInstance>
   <componentInstance name="main_controller" category="processor">
     <featureInstance name="GpioBusData" category="busAccess">
@@ -234,73 +262,132 @@
     <classifier xsi:type="aadl2:ProcessorType" href="../MainController.aadl#MainController.MainController"/>
   </componentInstance>
   <componentInstance name="coffee_maker" category="system">
+    <featureInstance name="coffeeInstruction" category="abstractFeature">
+      <feature xsi:type="aadl2:AbstractFeature" href="../coffeeMaker/CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedAbstractFeature.0"/>
+    </featureInstance>
+    <featureInstance name="coffee" category="abstractFeature" direction="out">
+      <feature xsi:type="aadl2:AbstractFeature" href="../coffeeMaker/CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedAbstractFeature.1"/>
+    </featureInstance>
+    <featureInstance name="GpioBusData" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../coffeeMaker/CoffeeMakerSubsystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.0"/>
+    </featureInstance>
     <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0"/>
     <index>0</index>
     <classifier xsi:type="aadl2:SystemType" href="../coffeeMaker/CoffeeMakerSubsystem.aadl#CoffeeMakerSubsystem.CoffeeMakerSystem"/>
   </componentInstance>
-  <connectionInstance name="drink_selection -> buttons.Water" kind="portConnection" destination="//@componentInstance.2/@featureInstance.0" source="//@featureInstance.1">
-    <connectionReference context="/" source="//@featureInstance.1" destination="//@componentInstance.2/@featureInstance.0">
+  <connectionInstance name="drink_selection -> buttons.DrinkSelection" kind="portConnection" destination="//@componentInstance.2/@featureInstance.1" source="//@featureInstance.2">
+    <connectionReference context="/" source="//@featureInstance.2" destination="//@componentInstance.2/@featureInstance.1">
       <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.0"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance name="drink_selection -> buttons.Milk" kind="portConnection" destination="//@componentInstance.2/@featureInstance.1" source="//@featureInstance.1">
-    <connectionReference context="/" source="//@featureInstance.1" destination="//@componentInstance.2/@featureInstance.1">
-      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.1"/>
+  <connectionInstance name="milk_container -> milk_container_sensor.Replenished" kind="portConnection" destination="//@componentInstance.3/@featureInstance.0" source="//@featureInstance.3">
+    <connectionReference context="/" source="//@featureInstance.3" destination="//@componentInstance.3/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.14"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance name="drink_selection -> buttons.MilkFoam" kind="portConnection" destination="//@componentInstance.2/@featureInstance.2" source="//@featureInstance.1">
-    <connectionReference context="/" source="//@featureInstance.1" destination="//@componentInstance.2/@featureInstance.2">
-      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.2"/>
+  <connectionInstance name="water_container -> water_container_sensor.Replenished" kind="portConnection" destination="//@componentInstance.4/@featureInstance.0" source="//@featureInstance.4">
+    <connectionReference context="/" source="//@featureInstance.4" destination="//@componentInstance.4/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.15"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance name="drink_selection -> buttons.Coffee" kind="portConnection" destination="//@componentInstance.2/@featureInstance.3" source="//@featureInstance.1">
-    <connectionReference context="/" source="//@featureInstance.1" destination="//@componentInstance.2/@featureInstance.3">
-      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.3"/>
+  <connectionInstance name="coffee_bean_container -> coffee_bean_container_sensor.Replenished" kind="portConnection" destination="//@componentInstance.5/@featureInstance.0" source="//@featureInstance.5">
+    <connectionReference context="/" source="//@featureInstance.5" destination="//@componentInstance.5/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.13"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance name="milk_container -> milk_container_sensor.Replenished" kind="portConnection" destination="//@componentInstance.3/@featureInstance.0" source="//@featureInstance.2">
-    <connectionReference context="/" source="//@featureInstance.2" destination="//@componentInstance.3/@featureInstance.0">
-      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.10"/>
-    </connectionReference>
-  </connectionInstance>
-  <connectionInstance name="water_container -> water_container_sensor.Replenished" kind="portConnection" destination="//@componentInstance.4/@featureInstance.0" source="//@featureInstance.3">
-    <connectionReference context="/" source="//@featureInstance.3" destination="//@componentInstance.4/@featureInstance.0">
-      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.11"/>
-    </connectionReference>
-  </connectionInstance>
-  <connectionInstance name="coffee_bean_container -> coffee_bean_container_sensor.Replenished" kind="portConnection" destination="//@componentInstance.5/@featureInstance.0" source="//@featureInstance.4">
-    <connectionReference context="/" source="//@featureInstance.4" destination="//@componentInstance.5/@featureInstance.0">
-      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.9"/>
-    </connectionReference>
-  </connectionInstance>
-  <connectionInstance name="gpio_bus -> main_controller.GpioBusData" complete="true" kind="accessConnection" destination="//@componentInstance.6/@featureInstance.0" source="//@componentInstance.0">
-    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.6/@featureInstance.0">
+  <connectionInstance name="gpio_bus -> main_controller.GpioBusData" complete="true" kind="accessConnection" destination="//@componentInstance.8/@featureInstance.0" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.8/@featureInstance.0">
       <connection xsi:type="aadl2:AccessConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.0"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance name="signalizer.Finished -> display" destination="//@featureInstance.0" source="//@componentInstance.1/@featureInstance.3">
-    <connectionReference context="/" source="//@componentInstance.1/@featureInstance.3" destination="//@featureInstance.0">
-      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.4"/>
+  <connectionInstance name="gpio_bus -> coffee_maker.GpioBusData" complete="true" kind="accessConnection" destination="//@componentInstance.9/@featureInstance.2" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.9/@featureInstance.2">
+      <connection xsi:type="aadl2:AccessConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.1"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance name="signalizer.RefillmentNeeded -> display" destination="//@featureInstance.0" source="//@componentInstance.1/@featureInstance.4">
-    <connectionReference context="/" source="//@componentInstance.1/@featureInstance.4" destination="//@featureInstance.0">
-      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.5"/>
+  <connectionInstance name="gpio_bus -> buttons.GpioBusData" complete="true" kind="accessConnection" destination="//@componentInstance.2/@featureInstance.2" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.2/@featureInstance.2">
+      <connection xsi:type="aadl2:AccessConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.2"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance name="milk_container_sensor.RefillmentNeeded -> signalizer.MilkRefillmentNeeded" complete="true" kind="portConnection" destination="//@componentInstance.1/@featureInstance.1" source="//@componentInstance.3/@featureInstance.1">
-    <connectionReference context="/" source="//@componentInstance.3/@featureInstance.1" destination="//@componentInstance.1/@featureInstance.1">
-      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.7"/>
+  <connectionInstance name="gpio_bus -> signalizer.GpioBusData" complete="true" kind="accessConnection" destination="//@componentInstance.1/@featureInstance.3" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.1/@featureInstance.3">
+      <connection xsi:type="aadl2:AccessConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.3"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance name="water_container_sensor.RefillmentNeeded -> signalizer.WaterRefillmentNeeded" complete="true" kind="portConnection" destination="//@componentInstance.1/@featureInstance.0" source="//@componentInstance.4/@featureInstance.1">
-    <connectionReference context="/" source="//@componentInstance.4/@featureInstance.1" destination="//@componentInstance.1/@featureInstance.0">
+  <connectionInstance name="gpio_bus -> milk_container_sensor.GpioBusData" complete="true" kind="accessConnection" destination="//@componentInstance.3/@featureInstance.2" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.3/@featureInstance.2">
+      <connection xsi:type="aadl2:AccessConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="gpio_bus -> water_container_sensor.GpioBusData" complete="true" kind="accessConnection" destination="//@componentInstance.4/@featureInstance.2" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.4/@featureInstance.2">
+      <connection xsi:type="aadl2:AccessConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="gpio_bus -> coffee_bean_container_sensor.GpioBusData" complete="true" kind="accessConnection" destination="//@componentInstance.5/@featureInstance.2" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.5/@featureInstance.2">
+      <connection xsi:type="aadl2:AccessConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="signalizer.Finished -> display" destination="//@featureInstance.0" source="//@componentInstance.1/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.1/@featureInstance.1" destination="//@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="signalizer.RefillmentNeeded -> display" destination="//@featureInstance.0" source="//@componentInstance.1/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.1/@featureInstance.2" destination="//@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.11"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="buttons.DrinkSelectionHandler -> drink_selection_process.drink_type" complete="true" kind="portConnection" destination="//@componentInstance.6/@featureInstance.4" source="//@componentInstance.2/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.2/@featureInstance.0" destination="//@componentInstance.6/@featureInstance.4">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="milk_container_sensor.StockLevel -> supplies_process.stock_level" complete="true" kind="portConnection" destination="//@componentInstance.7/@featureInstance.0" source="//@componentInstance.3/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.3/@featureInstance.1" destination="//@componentInstance.7/@featureInstance.0">
       <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.8"/>
     </connectionReference>
   </connectionInstance>
-  <connectionInstance name="coffee_bean_container_sensor.RefillmentNeeded -> signalizer.CoffeeRefillmentNeeded" complete="true" kind="portConnection" destination="//@componentInstance.1/@featureInstance.2" source="//@componentInstance.5/@featureInstance.1">
-    <connectionReference context="/" source="//@componentInstance.5/@featureInstance.1" destination="//@componentInstance.1/@featureInstance.2">
-      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.6"/>
+  <connectionInstance name="water_container_sensor.StockLevel -> supplies_process.stock_level" complete="true" kind="portConnection" destination="//@componentInstance.7/@featureInstance.0" source="//@componentInstance.4/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.4/@featureInstance.1" destination="//@componentInstance.7/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.9"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="coffee_bean_container_sensor.StockLevel -> supplies_process.stock_level" complete="true" kind="portConnection" destination="//@componentInstance.7/@featureInstance.0" source="//@componentInstance.5/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.5/@featureInstance.1" destination="//@componentInstance.7/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.10"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="drink_selection_process.Water -> coffee_maker.coffeeInstruction" complete="true" destination="//@componentInstance.9/@featureInstance.0" source="//@componentInstance.6/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.6/@featureInstance.0" destination="//@componentInstance.9/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="drink_selection_process.Milk -> coffee_maker.coffeeInstruction" complete="true" destination="//@componentInstance.9/@featureInstance.0" source="//@componentInstance.6/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.6/@featureInstance.1" destination="//@componentInstance.9/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="drink_selection_process.MilkFoam -> coffee_maker.coffeeInstruction" complete="true" destination="//@componentInstance.9/@featureInstance.0" source="//@componentInstance.6/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.6/@featureInstance.2" destination="//@componentInstance.9/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="drink_selection_process.Coffee -> coffee_maker.coffeeInstruction" complete="true" destination="//@componentInstance.9/@featureInstance.0" source="//@componentInstance.6/@featureInstance.3">
+    <connectionReference context="/" source="//@componentInstance.6/@featureInstance.3" destination="//@componentInstance.9/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="supplies_process.RefillmentNeeded -> signalizer.RefillmentNeededSignal" complete="true" kind="portConnection" destination="//@componentInstance.1/@featureInstance.0" source="//@componentInstance.7/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.7/@featureInstance.1" destination="//@componentInstance.1/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.12"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="coffee_maker.coffee -> coffee" destination="//@featureInstance.1" source="//@componentInstance.9/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.9/@featureInstance.1" destination="//@featureInstance.1">
+      <connection xsi:type="aadl2:FeatureConnection" href="../CoffeeMachineSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedFeatureConnection.7"/>
     </connectionReference>
   </connectionInstance>
   <systemOperationMode name="No Modes"/>

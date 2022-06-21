@@ -7,24 +7,4 @@ public
     		GpioBusData: requires bus access GpioBus::Gpio;
 	end MainController;
 	
-	thread main_controller_CANcomms
-	  features
-	    CanDataOutside1 : in out data port CarDataTypes::CAN_Frame;
-	    CanDataOutside2 : in out data port CarDataTypes::CAN_Frame;
-	    CanDataOutside3 : in out data port CarDataTypes::CAN_Frame;
-	    CanDataOutside4 : in out data port CarDataTypes::CAN_Frame;
-	    CanDataOutside5 : in out data port CarDataTypes::CAN_Frame;
-	    CanDataOutside6 : in out data port CarDataTypes::CAN_Frame;
-	    CanDataInside : in out data port CarDataTypes::CAN_Frame;
-	  properties
-	    Dispatch_Protocol => Periodic;
-	    Dispatch_Offset => 	2ms;
-	    Deadline => 15ms;	
-	    Period => 20ms;
-	    Compute_Execution_Time => 0ms..2ms;	
-	end main_controller_CANcomms;
-	 
-	thread implementation main_controller_CANcomms.impl
-	end main_controller_CANcomms.impl;
-	
 end MainController;

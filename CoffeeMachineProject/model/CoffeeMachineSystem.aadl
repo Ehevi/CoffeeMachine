@@ -3,9 +3,11 @@ public
 	with GpioBus;
 	with MainController;
 	with Display;
-	with Input;
+	with DrinkSelectionProcess;
 	with Container;
 	with CoffeeMakerSubsystem;
+	with Input;
+	with SuppliesProcess;
 	
 	system CoffeeMachineSystem
 		features
@@ -22,12 +24,17 @@ public
 		subcomponents
 			-- devices
 			signalizer: device Display::Display;
+			-- buttons: device Input::Input;
+			
+			-- input
 			buttons: device Input::Input;
+			drink_selection_process: process DrinkSelectionProcess::DrinkSelectionProcess;
 			
 			-- containers
 			milk_container_sensor: device Container::Container;
 			water_container_sensor: device Container::Container;
 			coffee_bean_container_sensor: device Container::Container;
+			supplies_process: process SuppliesProcess::SuppliesProcess;
 			
 			-- subsystem
 			coffee_maker: system CoffeeMakerSubsystem::CoffeeMakerSystem;
@@ -40,28 +47,39 @@ public
   		
 		connections
 			bus_conn: bus access gpio_bus -> main_controller.GpioBusData;
+			bus_conn_coffee_maker: bus access gpio_bus -> coffee_maker.GpioBusData;
 			
 			-- drink selection
-			drink_selection_water: feature drink_selection -> buttons.Water;
-			drink_selection_milk: feature drink_selection -> buttons.Milk;
-			drink_selection_milk_foam: feature drink_selection -> buttons.MilkFoam;
-			drink_selection_coffee: feature drink_selection -> buttons.Coffee;
+			buttons_connection: bus access gpio_bus -> buttons.GpioBusData;
+			buttons_handler: feature drink_selection -> buttons.DrinkSelection;
+			buttons_processor: feature buttons.DrinkSelectionHandler -> drink_selection_process.drink_type;
+			coffee_type_selection_milk: feature drink_selection_process.Milk -> coffee_maker.coffeeInstruction;
+			coffee_type_selection_water: feature drink_selection_process.Water -> coffee_maker.coffeeInstruction;
+			coffee_type_selection_milk_foam: feature drink_selection_process.MilkFoam -> coffee_maker.coffeeInstruction;
+			coffee_type_selection_coffee: feature drink_selection_process.Coffee -> coffee_maker.coffeeInstruction;
 			
 			-- finished
 			finished_signal: feature signalizer.Finished -> display;
+  			coffee_ready_signal: feature coffee_maker.coffee -> coffee;
+  			coffee_preparation_finished: bus access gpio_bus -> signalizer.GpioBusData;
   			
   			-- refillment needed signal
-  			refillment_needed_signal: feature signalizer.RefillmentNeeded -> display;
+  			milk_supplies_process_handler: feature milk_container_sensor.StockLevel -> supplies_process.stock_level;
+  			water_supplies_process_handler: feature water_container_sensor.StockLevel -> supplies_process.stock_level;
+  			coffee_supplies_process_handler: feature coffee_bean_container_sensor.StockLevel -> supplies_process.stock_level;
+  			milk_sensor_gpio: bus access gpio_bus -> milk_container_sensor.GpioBusData;
+  			water_sensor_gpio: bus access gpio_bus -> water_container_sensor.GpioBusData;
+  			coffee_sensor_gpio: bus access gpio_bus -> coffee_bean_container_sensor.GpioBusData;
   			
-  			-- refillment needed signal from containers
-  			coffee_refillment_needed: feature coffee_bean_container_sensor.refillmentNeeded -> signalizer.CoffeeRefillmentNeeded;
-  			milk_refillment_needed: feature milk_container_sensor.refillmentNeeded -> signalizer.MilkRefillmentNeeded;
-  			water_refillment_needed: feature water_container_sensor.refillmentNeeded -> signalizer.WaterRefillmentNeeded;
+  			refillment_needed_signal: feature signalizer.RefillmentNeeded -> display;
+  			refillment_needed: feature supplies_process.RefillmentNeeded -> signalizer.RefillmentNeededSignal;
   			
   			-- replenish signal
   			coffee_replenish: feature coffee_bean_container -> coffee_bean_container_sensor.replenished;
   			milk_replelish: feature milk_container -> milk_container_sensor.replenished;
   			water_replenish: feature water_container -> water_container_sensor.replenished;
+  			
+  			
 	end CoffeeMachineSystem.impl;
 
 end CoffeeMachineSystem;

@@ -1,5 +1,177 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="ab0e4520-ce9f-4856-810e-3c53de364c26" manual="true">
+    <element uuid="8e5b7bf3-6af9-44dc-bfc5-ced4e70f9727" manual="true">
+      <element uuid="18ffb9e0-60ff-49ef-9962-d2eb0c6ea2f1" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>coffee</seg>
+        </bo>
+        <position y="260.0"/>
+      </element>
+      <element uuid="71e81d45-4827-438d-a98e-e4666cac189b" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>coffee_bean_container</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="3a25478c-d31c-47b3-bd23-ae5b7cc6ee2b" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>display</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="38a70115-4b1b-49d9-bd31-33c550fb1cbb" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>drink_selection</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="36c1577e-f778-4908-bfdf-293dac780429" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>milk_container</seg>
+        </bo>
+        <position y="210.0"/>
+      </element>
+      <element uuid="9a151774-9c0a-44ee-b907-0feefa4f12b4" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>water_container</seg>
+        </bo>
+        <position y="160.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>coffeeMachine</seg>
+      </bo>
+      <position x="241.0" y="38.0"/>
+      <size width="269.0" height="310.0"/>
+    </element>
+    <element uuid="ce6d1911-ff34-43fe-aacc-3c4e899b92a2" manual="true">
+      <element uuid="e1faae5c-20a8-4569-b497-2c43c9abe441" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>coffee_bean_supply</seg>
+        </bo>
+        <position x="37.177093505859375" y="110.0"/>
+      </element>
+      <element uuid="03879063-26ff-4b67-bd01-00178dca5020" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>eyes</seg>
+        </bo>
+        <position x="137.75651168823242" y="10.0"/>
+      </element>
+      <element uuid="fbe4560d-70c5-4af9-b649-394c19f40ef9" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>finger</seg>
+        </bo>
+        <position x="130.00260543823242" y="60.0"/>
+      </element>
+      <element uuid="74f98609-dfcc-4c84-a1bf-741421d0be7a" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>hands</seg>
+        </bo>
+        <position x="128.51823043823242" y="260.0"/>
+      </element>
+      <element uuid="4f3cfe8f-2d4e-4ebb-ab59-c083f82d8f00" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>milk_supply</seg>
+        </bo>
+        <position x="90.29557800292969" y="210.0"/>
+      </element>
+      <element uuid="94864ff7-107b-48f9-b0fd-4cb1dbef7a34" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>water_supply</seg>
+        </bo>
+        <position x="80.42578887939453" y="160.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>user</seg>
+      </bo>
+      <position x="40.0" y="38.0"/>
+      <size width="181.0" height="310.0"/>
+    </element>
+    <element uuid="a15bb3a0-0993-4d32-93a5-97ff061fc058" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>coffee_collection : SystemEnvironment_impl_Instance.coffeeMachine.coffee -> SystemEnvironment_impl_Instance.user.hands</seg>
+      </bo>
+    </element>
+    <element uuid="595e11a5-c208-4614-bd81-12261167b38b" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>coffee_refillment : SystemEnvironment_impl_Instance.user.coffee_bean_supply -> SystemEnvironment_impl_Instance.coffeeMachine.coffee_bean_container</seg>
+      </bo>
+    </element>
+    <element uuid="3972d9f8-9b54-40d7-bbd7-75f65dcec682" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>drink_selection : SystemEnvironment_impl_Instance.user.finger -> SystemEnvironment_impl_Instance.coffeeMachine.drink_selection</seg>
+      </bo>
+    </element>
+    <element uuid="39014de8-4d49-49b0-9a36-3b99897d8494" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>milk_refillment : SystemEnvironment_impl_Instance.user.milk_supply -> SystemEnvironment_impl_Instance.coffeeMachine.milk_container</seg>
+      </bo>
+    </element>
+    <element uuid="09ae22d2-8fc0-4ae3-9e36-f923269bff67" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>ready : SystemEnvironment_impl_Instance.coffeeMachine.display -> SystemEnvironment_impl_Instance.user.eyes</seg>
+      </bo>
+    </element>
+    <element uuid="3b4f5d28-ea46-4d1f-8f72-fa0da65ca4fe" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>refillment_needed : SystemEnvironment_impl_Instance.coffeeMachine.display -> SystemEnvironment_impl_Instance.user.eyes</seg>
+      </bo>
+    </element>
+    <element uuid="8429f85d-c962-4f13-acf2-245d97d076fc" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>water_refillment : SystemEnvironment_impl_Instance.user.water_supply -> SystemEnvironment_impl_Instance.coffeeMachine.water_container</seg>
+      </bo>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/coffeemachineproject/instances/systemenvironment_systemenvironment_impl_instance.aaxl2</seg>
+    </bo>
+    <position x="210.0" y="80.0"/>
+    <size width="540.0" height="360.0"/>
+  </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>
     <context>
