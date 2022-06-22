@@ -64,4 +64,13 @@
 ### Model
 ![3-coffee_maker](https://user-images.githubusercontent.com/48785655/174969283-255fef1c-89cc-4def-905b-6a7662f9aa71.png)
 
-## Proponowane metody analizy - dostępne w Osate
+## Analizy
+### Semantic Checks
+#### [Port Connection Consistency]()
+#### Binding Constraints
+![binding-constraints](https://user-images.githubusercontent.com/48785655/174991026-bf454cce-f353-46ad-81fb-48ed6e78b45d.png)
+
+### Model Maintenance
+#### Model Statistics
+![model-elements](https://user-images.githubusercontent.com/48785655/174990698-f80dfc2b-b213-4a8f-aaa6-45a22fbdeb4c.png)
+
