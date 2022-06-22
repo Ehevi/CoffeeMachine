@@ -1,5 +1,475 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="ef2b76db-88b0-4a8b-be69-2be0a00778ae" manual="true">
+    <element uuid="dc3b071d-cf00-4b46-a2ce-5317f861bb00" manual="true">
+      <element uuid="bd0b8a5c-7e0e-4ad4-970b-c50b0d042ea7" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>GpioBusData</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="d76747d4-d56e-4501-ab58-33c7c17696f5" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>instruction</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="5fd23611-4bf9-4d07-8c0b-4a7421cff4d8" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>instruction_handler</seg>
+        </bo>
+        <position x="171.42180633544922" y="60.0"/>
+      </element>
+      <element uuid="686ca1a4-1a98-43a9-bc96-e4b5870bf318" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>temperature</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>analyzer</seg>
+      </bo>
+      <position x="470.0" y="220.0"/>
+      <size width="312.14575958251953" height="160.0"/>
+    </element>
+    <element uuid="7407f420-c3c3-4902-b967-d8c165e11fa0" manual="true">
+      <element uuid="e7baf594-f9e9-41a6-8484-1fc61b5a80a3" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>GpioBusData</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>coffee_controller</seg>
+      </bo>
+      <position x="80.00000000000003" y="90.0"/>
+      <size width="361.9244918823242" height="60.0"/>
+    </element>
+    <element uuid="146cc90c-f7e3-4e69-a7fb-e148ffe86897" manual="true">
+      <element uuid="d5ec39dc-2b55-44d8-b5cd-76927276d2ea" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>foam</seg>
+        </bo>
+        <position x="214.8399200439453" y="210.0"/>
+      </element>
+      <element uuid="641c5466-1eeb-4ef4-9be1-bb498f3f90d4" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>grind</seg>
+        </bo>
+        <position x="214.28653717041016" y="110.0"/>
+      </element>
+      <element uuid="6022c1e6-d203-4bc6-8eaa-78ddabb9f634" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>heat</seg>
+        </bo>
+        <position x="218.7982521057129" y="10.0"/>
+      </element>
+      <element uuid="2060fa0e-ebc7-424f-804a-6f759f1c9b56" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>instruction</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="2316872d-e4a0-4040-804f-c275c7855ffb" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>pour</seg>
+        </bo>
+        <position x="218.2969512939453" y="160.0"/>
+      </element>
+      <element uuid="4abb134a-2053-44c3-af14-a8428183f16b" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>prepare_coffee</seg>
+        </bo>
+        <position x="148.4336700439453" y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>coffee_making_process</seg>
+      </bo>
+      <position x="830.0" y="170.0"/>
+      <size width="260.85033416748047" height="260.0"/>
+    </element>
+    <element uuid="00d1fe62-ee7a-419a-95e9-8aeaa50f6c98" manual="true">
+      <element uuid="1c38ce9e-bb72-4c34-b54f-c645080e566f" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>GpioBusData</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="05f701b0-7e31-43eb-8b77-804f6ee6ceaa" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>make_foam</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>foamer</seg>
+      </bo>
+      <position x="1180.8502731323242" y="558.0"/>
+      <size width="297.77082443237305" height="110.0"/>
+    </element>
+    <element uuid="e3179c1f-a064-46a1-bd98-8774aa00ffde" manual="true">
+      <element uuid="a5474305-34db-40f6-8d4e-ff6e0f97b4f5" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>GpioBusData</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="f4f56fb9-6c1a-40c1-b029-f205bd3bd380" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>grind</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>grinder</seg>
+      </bo>
+      <position x="1180.8502731323242" y="298.0"/>
+      <size width="298.3242073059082" height="110.0"/>
+    </element>
+    <element uuid="7a1ed8fb-c046-435c-a163-67574feb675f" manual="true">
+      <element uuid="6e25ea0d-771a-4ec0-9c51-5838c003070e" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>GpioBusData</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="fc459998-adc5-4fc9-b7ad-a38a8e48a16f" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>heat</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>heater</seg>
+      </bo>
+      <position x="1180.8502731323242" y="38.0"/>
+      <size width="293.81249237060547" height="110.0"/>
+    </element>
+    <element uuid="5e3d0ab6-7693-4db8-bf5e-da6f1e3551ac" manual="true">
+      <element uuid="2f85c4d3-c45f-41c5-b4c8-3d3311277d3e" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>GpioBusData</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="d06fadea-868e-49ab-adbc-e6d7e733a654" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>pour</seg>
+        </bo>
+        <position x="285.2239418029785" y="35.0"/>
+      </element>
+      <element uuid="cf4bbf78-ff5c-4043-bae1-cdf7ada10090" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>pour_command</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>pourer</seg>
+      </bo>
+      <position x="1180.8502731323242" y="428.0"/>
+      <size width="327.7773246765137" height="110.0"/>
+    </element>
+    <element uuid="15b4d199-1757-4c80-a5a1-f1caa05a2f4e" manual="true">
+      <element uuid="db9b51ee-fdae-4d73-ba2c-8423f946f538" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>GpioBusData</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="f09b387f-f915-4211-876f-ce7bbfd3b795" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>prepare_coffee</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>press</seg>
+      </bo>
+      <position x="1180.8502731323242" y="168.0"/>
+      <size width="312.87499237060547" height="110.0"/>
+    </element>
+    <element uuid="995b16b4-a2dc-463f-acf5-ec996077be1f" manual="true">
+      <element uuid="fe9b41a9-4162-4e05-ac50-8c34b76a38be" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>GpioBusData</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="975793fd-3b4e-4e42-8e6f-bc7874cccf86" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>temperature</seg>
+        </bo>
+        <position x="239.7096405029297" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>temp_sensor</seg>
+      </bo>
+      <position x="80.00000000000003" y="170.0"/>
+      <size width="335.8112030029297" height="60.0"/>
+    </element>
+    <element uuid="663f7aaa-be70-47bd-9961-7ffbf2809531" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>analyzer_connection : CoffeeMakerSystem_impl_Instance.GpioBusData -> CoffeeMakerSystem_impl_Instance.analyzer.GpioBusData</seg>
+      </bo>
+      <bendpoints>
+        <point x="522.0" y="315.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="158b62e9-2a35-4eb5-acde-a53d2474490e" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>coffee_pouring : CoffeeMakerSystem_impl_Instance.pourer.pour -> CoffeeMakerSystem_impl_Instance.coffee</seg>
+      </bo>
+    </element>
+    <element uuid="4e8b2dc0-1a0d-4c16-bfc8-152add63a012" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>controller_connection : CoffeeMakerSystem_impl_Instance.GpioBusData -> CoffeeMakerSystem_impl_Instance.coffee_controller.GpioBusData</seg>
+      </bo>
+      <bendpoints>
+        <point x="522.0" y="132.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="36797bd9-bcc4-4618-a582-0e8d339c6882" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>foam : CoffeeMakerSystem_impl_Instance.coffee_making_process.foam -> CoffeeMakerSystem_impl_Instance.foamer.make_foam</seg>
+      </bo>
+      <bendpoints>
+        <point x="1640.8502197265625" y="410.0"/>
+        <point x="1640.8502197265625" y="600.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="6ec3af5f-2127-4254-a9f3-710efb24e556" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>foamer_connection : CoffeeMakerSystem_impl_Instance.GpioBusData -> CoffeeMakerSystem_impl_Instance.foamer.GpioBusData</seg>
+      </bo>
+      <bendpoints>
+        <point x="529.0" y="643.0"/>
+        <point x="1210.0" y="652.0"/>
+        <point x="1630.8502197265625" y="650.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="a7cf815a-4a7e-4d60-9c76-cccac6e3a422" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>grind : CoffeeMakerSystem_impl_Instance.coffee_making_process.grind -> CoffeeMakerSystem_impl_Instance.grinder.grind</seg>
+      </bo>
+      <bendpoints>
+        <point x="1660.8502197265625" y="310.0"/>
+        <point x="1660.8502197265625" y="390.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="32abade2-983a-4b4e-961a-6e0c136d62f3" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>grinder_connection : CoffeeMakerSystem_impl_Instance.GpioBusData -> CoffeeMakerSystem_impl_Instance.grinder.GpioBusData</seg>
+      </bo>
+      <bendpoints>
+        <point x="1670.8502197265625" y="80.0"/>
+        <point x="1670.8502197265625" y="340.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="1427f61a-7ab8-465c-8eea-a1f2bf789e36" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>heat : CoffeeMakerSystem_impl_Instance.coffee_making_process.heat -> CoffeeMakerSystem_impl_Instance.heater.heat</seg>
+      </bo>
+      <bendpoints>
+        <point x="1630.8502197265625" y="210.0"/>
+        <point x="1630.8502197265625" y="130.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="c6d84c79-a002-4a28-ade3-202d28196da4" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>heater_connection : CoffeeMakerSystem_impl_Instance.GpioBusData -> CoffeeMakerSystem_impl_Instance.heater.GpioBusData</seg>
+      </bo>
+    </element>
+    <element uuid="92cdf627-af41-47ec-a6b0-22cf26ff3a20" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>instruction_handling : CoffeeMakerSystem_impl_Instance.analyzer.instruction_handler -> CoffeeMakerSystem_impl_Instance.coffee_making_process.instruction</seg>
+      </bo>
+    </element>
+    <element uuid="c3a75dc7-8719-4a64-9f76-8143f891dfe6" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>instructions : CoffeeMakerSystem_impl_Instance.coffeeInstruction -> CoffeeMakerSystem_impl_Instance.analyzer.instruction</seg>
+      </bo>
+    </element>
+    <element uuid="0b57f0be-ec3a-41f1-8182-240b617ae1af" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>make_coffee : CoffeeMakerSystem_impl_Instance.coffee_making_process.prepare_coffee -> CoffeeMakerSystem_impl_Instance.press.prepare_coffee</seg>
+      </bo>
+    </element>
+    <element uuid="d45d470d-df47-480c-a6e4-a93078ef00fe" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>pour : CoffeeMakerSystem_impl_Instance.coffee_making_process.pour -> CoffeeMakerSystem_impl_Instance.pourer.pour_command</seg>
+      </bo>
+      <bendpoints>
+        <point x="1650.8502197265625" y="360.0"/>
+        <point x="1650.8502197265625" y="470.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="29fb7d45-264e-4846-be58-bc4057ab795f" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>pourer_connection : CoffeeMakerSystem_impl_Instance.GpioBusData -> CoffeeMakerSystem_impl_Instance.pourer.GpioBusData</seg>
+      </bo>
+      <bendpoints>
+        <point x="527.0" y="517.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="ff36e36e-581f-4744-b946-6aea3366b119" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>press_connection : CoffeeMakerSystem_impl_Instance.GpioBusData -> CoffeeMakerSystem_impl_Instance.press.GpioBusData</seg>
+      </bo>
+      <bendpoints>
+        <point x="1670.8502197265625" y="80.0"/>
+        <point x="1670.8502197265625" y="210.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="1814500a-8f90-4d93-bcd9-175425cc671d" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>temp_measure : CoffeeMakerSystem_impl_Instance.temp_sensor.temperature -> CoffeeMakerSystem_impl_Instance.analyzer.temperature</seg>
+      </bo>
+      <bendpoints>
+        <point x="933.0" y="213.0"/>
+        <point x="933.0" y="259.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="1579c334-f98e-47b8-9492-11cc304e586d" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>temp_sensor_connection : CoffeeMakerSystem_impl_Instance.GpioBusData -> CoffeeMakerSystem_impl_Instance.temp_sensor.GpioBusData</seg>
+      </bo>
+      <bendpoints>
+        <point x="521.0" y="217.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="26488dc3-6fc6-46e5-a1fc-b8d81a448cb8" manual="true" dockArea="right">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>coffee</seg>
+      </bo>
+      <position x="1526.7174491882324" y="463.0"/>
+    </element>
+    <element uuid="afbcd12b-33c9-4746-ad30-709e93218e0d" manual="true" dockArea="left">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>coffeeInstruction</seg>
+      </bo>
+      <position y="328.0"/>
+    </element>
+    <element uuid="0aea01fc-b9cc-4a91-935e-2c7fd455f97e" manual="true" dockArea="left">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>GpioBusData</seg>
+      </bo>
+      <position y="48.0"/>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/coffeemachineproject/model/coffeemaker/instances/coffeemakersubsystem_coffeemakersystem_impl_instance.aaxl2</seg>
+    </bo>
+    <position x="500.0"/>
+    <size width="1580.0" height="680.0"/>
+  </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>
     <context>
