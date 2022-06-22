@@ -72,5 +72,6 @@
 
 ### Model Maintenance
 #### Model Statistics
+![cofemach](https://user-images.githubusercontent.com/48785655/174992064-6ed6aaaa-f8af-4f2a-8a9d-fe400e45f7f0.png)
 ![model-elements](https://user-images.githubusercontent.com/48785655/174990698-f80dfc2b-b213-4a8f-aaa6-45a22fbdeb4c.png)
 
