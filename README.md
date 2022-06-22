@@ -20,11 +20,19 @@
 2. Ekspres analizuje dane z czujników w pojemnikach w celu sprawdzenia, czy znajduje się tam wystarczająco dużo podstawowych składników. Jeżeli nie, informuje o tym użytkownika i zawiesza dalsze działanie do czasu ich uzupełnienia.
 3. Ekspres przygotowuje wybrany napój na podstawie zaprogramowanej sekwencji. Podsystem odpowiedzialny za przygotowanie kawy na bieżąco przygotowuje składniki napoju i wlewa je do szklanki.
 4. Ekspres informuje użytkownika o zakończeniu przygotowywania napoju.
+5. Uzytkownik zabiera przygotowany napój.
 
 ### Model środowiska i interakcji użytkownika z systemem
-![system_env](https://user-images.githubusercontent.com/48785655/174123763-712a8071-8c97-4cb1-90e6-071942e80cae.png)
+![1-environment](https://user-images.githubusercontent.com/48785655/174969015-23564e8a-232c-4719-a57b-365e4fbcaf4f.png)
 
 ## Spis komponentów wraz z komentarzem
-## Model - rysunek
+## Model
+### System `Coffee machine`
+![2-cofmachine](https://user-images.githubusercontent.com/48785655/174969239-2457ee37-a893-48b3-85cb-ea43e6e5d142.png)
+### Podsystem `Coffee maker`
+![3-coffee_maker](https://user-images.githubusercontent.com/48785655/174969283-255fef1c-89cc-4def-905b-6a7662f9aa71.png)
+
+
+
 ## Proponowane metody analizy - dostępne w Osate
 ## Inne informacje zależne od tematu
