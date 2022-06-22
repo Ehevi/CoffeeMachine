@@ -1,7 +1,10 @@
 package Heater
 public
+	with GpioBus;
 	device Heater
 		features
 			heat: in data port;
+			
+			GpioBusData: requires bus access GpioBus::Gpio;
 	end Heater;
 end Heater;

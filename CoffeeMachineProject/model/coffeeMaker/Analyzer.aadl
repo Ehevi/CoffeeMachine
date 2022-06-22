@@ -1,10 +1,13 @@
 package Analyzer
 public
+	with GpioBus;
 	device Analyzer
 		features
 			temperature: in data port;
 			instruction: in data port;
 			
 			instruction_handler: out data port;
+			
+			GpioBusData: requires bus access GpioBus::Gpio;
 	end Analyzer;
 end Analyzer;

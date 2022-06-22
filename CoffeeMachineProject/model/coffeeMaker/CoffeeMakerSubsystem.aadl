@@ -52,7 +52,13 @@ public
 			
 			-- gpio bus data
 			controller_connection: bus access GpioBusData -> coffee_controller.GpioBusData;
-			-- buttons_connection: bus access gpio_bus -> buttons.GpioBusData;
+			grinder_connection: bus access GpioBusData -> grinder.GpioBusData;
+			heater_connection: bus access GpioBusData -> heater.GpioBusData;
+			foamer_connection: bus access GpioBusData -> foamer.GpioBusData;
+			press_connection: bus access GpioBusData -> press.GpioBusData;
+			analyzer_connection: bus access GpioBusData -> analyzer.GpioBusData;
+			pourer_connection: bus access GpioBusData -> pourer.GpioBusData;
+			temp_sensor_connection: bus access GpioBusData -> temp_sensor.GpioBusData;
 
 	end CoffeeMakerSystem.impl;
 end CoffeeMakerSubsystem;

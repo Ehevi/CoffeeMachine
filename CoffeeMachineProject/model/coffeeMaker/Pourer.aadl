@@ -1,8 +1,11 @@
 package Pourer
 public
+	with GpioBus;
 	device Pourer
 		features
 			pour: out data port;
 			pour_command: in data port;
+			
+			GpioBusData: requires bus access GpioBus::Gpio;
 	end Pourer;
 end Pourer;

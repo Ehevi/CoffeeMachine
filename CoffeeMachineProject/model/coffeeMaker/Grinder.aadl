@@ -1,7 +1,10 @@
 package Grinder
 public
+	with GpioBus;
 	device Grinder
 		features
 			grind: in data port;
+			
+			GpioBusData: requires bus access GpioBus::Gpio;
 	end Grinder;
 end Grinder;

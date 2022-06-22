@@ -1,7 +1,10 @@
 package CoffeePress
 public
+	with GpioBus;
 	device CoffeePress
 		features
 			prepare_coffee: in data port;
+			
+			GpioBusData: requires bus access GpioBus::Gpio;
 	end CoffeePress;
 end CoffeePress;

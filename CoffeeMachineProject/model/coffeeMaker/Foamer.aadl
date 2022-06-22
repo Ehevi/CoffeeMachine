@@ -1,7 +1,9 @@
 package Foamer
 public
+	with GpioBus;
 	device Foamer
 		features
 			make_foam: in data port;
+			GpioBusData: requires bus access GpioBus::Gpio;
 	end Foamer;
 end Foamer;

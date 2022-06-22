@@ -1,7 +1,10 @@
 package TempSensor
 public
+	with GpioBus;
 	device TempSensor
 		features
 			temperature: out data port;
+			
+			GpioBusData: requires bus access GpioBus::Gpio;
 	end TempSensor;
 end TempSensor;
