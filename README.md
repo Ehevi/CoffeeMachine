@@ -25,14 +25,43 @@
 ### Model środowiska i interakcji użytkownika z systemem
 ![1-environment](https://user-images.githubusercontent.com/48785655/174969015-23564e8a-232c-4719-a57b-365e4fbcaf4f.png)
 
-## Spis komponentów wraz z komentarzem
-## Model
-### System `Coffee machine`
+## System `CoffeeMachine`
+### Komponenty główne
+- `CoffeeMachineSystem`: główny komponent reprezentujący ekspres do kawy, który łączy pomniejsze komponenty w spójną całość
+- `main_controller`: procesor główny odpowiedzialny za zarządzanie procesami obsługującymi interakcję systemu z użytkownikiem, a więc wybór napoju (`drink_selection_process`) oraz kontrolę ilości składników potrzebnych do przygotowania wybranego napoju (`supplies_process`)
+- `gpio_bus`: połączenia umożliwiające komunikację urządzeń z procesorem
+
+### Komponenty wykonujące
+- `butttons`: urządzenie przyjmujące od użytkownika wybór napoju
+- `signalizer`: urządzenie sygnalizujące użytkownikowi konieczność uzupełnienia składników podstawowych lub zakończenie procesu przygotowywania napoju
+
+#### Czujniki
+- `water_container_sensor`: monitoruje ilość wody w pojemniku
+- `coffee_bean_container_sensor`: monitoruje ilość ziaren kawy w pojemniku
+- `milk_container_sensor`: monitoruje ilość mleka w pojemniku
+### Komponenty programowe
+- `drink_selection_process`: proces przetwarzający wybór użytkownika na instrukcję przygotowania napoju dla podsystemu `CoffeeMaker` - kolejność, w której powinny zostać uruchamiane poszczególne urządzenia tego podsystemu
+- `supplies_process`: proces sprawdzający, czy w pojemnikach znajduje się wystarczająco dużo składników, aby przygotować wybrany napój. Jeżeli nie, informacja o tym jest przekazywana do `signalizera` odpowiedzialnego za poinformowanie o tym użytkownika, a dalsze działanie systemu zostaje zawieszone.
+### Model
 ![2-cofmachine](https://user-images.githubusercontent.com/48785655/174969239-2457ee37-a893-48b3-85cb-ea43e6e5d142.png)
-### Podsystem `Coffee maker`
+
+## System `CoffeeMaker`
+### Komponenty główne
+- `CoffeeMakerSystem`: podsystem odpowiedzialny za przygotowanie napoju oraz dostarczenie go użytkownikowi
+- `coffee_controller`: procesor zarządzający pracą urządzeń podsystemu
+
+### Komponenty sprzętowe
+- `analyzer`: urządzenie przetwarzające sygnały przychodzące z zewnątrz na rozkazy przekazywane do określonego urządzenia. Właściwie fukcjonalność ta równie dobrze mogłaby być realizowana przez procesor i zawierać się w procesie `coffe_making_process`, jednak przypisanie jej osobnego komponentu rozjaśnia schemat przepływu danych na narysowanym modelu.
+- `heater`: urządzenie odpowiedzialne za podgrzewanie wody / mleka
+- `grinder`: młynek do ziaren kawy. Mielenie kawy odbywa się zawsze bezpośrednio przed jej zaparzeniem i przygotowywana jest dokładnie jedna porcja.
+- `press`: urządzenie odpowiedzialne za przelewowe zaparzenie zmielonej kawy. Jednorazowo przygotowuje jedną porcję espresso.
+- `foamer`: speniacz do mleka
+- `pourer`: urządzenie odpowiedzialne za dostarczenie składników do szklanki
+#### Czujniki
+- `temp_sensor`: monitoruje temperaturę wody i mleka
+### Komponenty programowe
+- `coffee_making_process`: proces odpowiedzialny za przygotowanie kawy. Odczytuje instrukcje przygotowania napoju i na ich podstawie zarządza poszczególnymi wątkami przypisanymi do urządzeń.
+### Model
 ![3-coffee_maker](https://user-images.githubusercontent.com/48785655/174969283-255fef1c-89cc-4def-905b-6a7662f9aa71.png)
 
-
-
 ## Proponowane metody analizy - dostępne w Osate
-## Inne informacje zależne od tematu
