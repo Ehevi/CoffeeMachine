@@ -66,7 +66,9 @@
 
 ## Analizy
 ### Semantic Checks
-#### [Port Connection Consistency]()
+#### Port Connection Consistency
+- [x] wygenerowany [raport](https://github.com/Ehevi/CoffeeMachine/blob/main/CoffeeMachineProject/model/instances/reports/ConnectionConsistency/CoffeeMachineSystem_CoffeeMachineSystem_impl_Instance__ConnectionConsistency.csv) nie zawiera żadnych błędów (`CoffeeMachineSystem`)
+- [x] wygenerowany [raport](https://github.com/Ehevi/CoffeeMachine/blob/main/CoffeeMachineProject/model/coffeeMaker/instances/reports/ConnectionConsistency/CoffeeMakerSubsystem_CoffeeMakerSystem_impl_Instance__ConnectionConsistency.csv) nie zawiera żadnych błędów (`CoffeeMakerSubsystem`)
 #### Binding Constraints
 ![binding-constraints](https://user-images.githubusercontent.com/48785655/174991026-bf454cce-f353-46ad-81fb-48ed6e78b45d.png)
 
